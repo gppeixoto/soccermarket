@@ -3,8 +3,7 @@ SEED_URL = 'http://www.transfermarkt.co.uk/transfers/transferrekorde/statistik?s
 queries = {
     "odds": "//tr[@class = 'odd']",
     "evens": "//tr[@class = 'even']",
-    "img_elem" : 'td[@class=""]//img[@class="bilderrahmen-fixed"]'
+    "img_elem" : 'td[@class=""]//img[@class="bilderrahmen-fixed"]',
+    "positions" : '//td/table/tbody/tr/td',
+    "market_values": '//td[@class = "rechts"]/text()'
 }
-
-def click_elem_path(nb):
-    return '//li[@class="page"]/a[text()==%d]' % nb
