@@ -5,5 +5,6 @@ queries = {
     "evens": "//tr[@class = 'even']",
     "img_elem" : 'td[@class=""]//img[@class="bilderrahmen-fixed"]',
     "positions" : '//td/table/tbody/tr/td',
-    "market_values": '//td[@class = "rechts"]/text()'
+    "market_values": '//td[@class = "rechts"]/text()',
+    "age_season" : '//td[@class="zentriert"]//text()'
 }
