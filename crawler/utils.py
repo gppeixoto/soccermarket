@@ -32,6 +32,17 @@ def get_age_season(transfers, queries):
     __assertEquals__(transfers, ages)
     return (ages, seasons)
 
+def get_involved_teams(transfers, queries):
+    from_to = transfers[0].xpath(queries["involved_teams"])
+    from_ = []
+    to = []
+    for i, elem in enumerate(from_to):
+        if i % 4 == 1:
+            from_.append(elem.text)
+        if i % 4 == 3:
+            to.append(elem.text)
+    return (from_, to)
+
 def get_next_page(driver, next_page):
     next_page = str(next_page)
     elems = driver.find_elements_by_xpath('//li[@class="page"]/a')

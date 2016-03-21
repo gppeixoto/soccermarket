@@ -7,22 +7,25 @@ from utils import *
 import pandas as pd
 
 class Transfer:
-    def __init__(self, name, img_url, position, value, age, season):
+    def __init__(self, name, img_url, position, value, age, season, from_, to):
         self.name = name
         self.img_url = img_url
         self.position = position
         self.value = value
         self.age = age
         self.season = season
+        self.from_ = from_
+        self.to = to
 
     def __str__(self):
         return str(self.to_tuple())
 
     def to_tuple(self):
-        return (self.name, self.img_url, self.position, self.value, self.age, self.season)
+        return (self.name, self.img_url, self.position, self.value, self.age, self.season, self.from_, self.to)
 
     def get_params_names(self):
-        return ['name', 'img_url', 'position', 'value', 'age', 'season']
+        return ['name', 'img_url', 'position', \
+                'value', 'age', 'season', 'from_', 'to']
 
 driver = webdriver.Firefox()
 driver.get(SEED_URL)
@@ -47,6 +50,7 @@ for next_page in xrange(2, 4):
     positions = get_positions(transfers, queries)
     values = get_market_values(transfers, queries)
     ages, seasons = get_age_season(transfers, queries)
+    from_, to = get_involved_teams(transfers, queries)
 
     del odds; del evens;
     
@@ -58,7 +62,9 @@ for next_page in xrange(2, 4):
         age = ages[cur]
         season = seasons[cur]
         value = values[cur]
-        t = Transfer(name, img_url, pos, value, age, season)
+        fr_ = from_[cur]
+        to_ = to[cur]
+        t = Transfer(name, img_url, pos, value, age, season, fr_, to_)
         global_transfers.append(t)
         cur += 1
 
