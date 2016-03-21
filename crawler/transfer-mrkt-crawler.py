@@ -29,9 +29,13 @@ driver.get(SEED_URL)
 global_transfers = []
 DEBUG = True
 
-for next_page in xrange(2, 3):
+for next_page in xrange(2, 4):
     cur = 0
+    print "current page: %d" % (next_page-1)
+    print "waiting 30s..."
     time.sleep(30)
+
+    print "parsing source code"
     source = driver.page_source
     tree = lxml.html.fromstring(source)
     
@@ -39,6 +43,7 @@ for next_page in xrange(2, 3):
     evens = tree.xpath(queries['evens'])
     transfers = odds+evens
 
+    print "parsing fields"
     positions = get_positions(transfers, queries)
     values = get_market_values(transfers, queries)
     ages, seasons = get_age_season(transfers, queries)
@@ -57,9 +62,10 @@ for next_page in xrange(2, 3):
         global_transfers.append(t)
         cur += 1
 
-    if DEBUG:
-        df = pd.DataFrame([trf.to_tuple() for trf in global_transfers], columns = global_transfers[0].get_params_names())
-        print df.head(n=10)
-    # click_elem = \
-    #     driver.find_element_by_xpath(click_elem_path(next_page))
-    # click_elem.click()  
+    click_elem = get_next_page(driver, next_page)
+    click_elem.click()
+
+if DEBUG:
+    df = pd.DataFrame([trf.to_tuple() for trf in global_transfers], columns=global_transfers[0].get_params_names())
+    print df.head(n=10)
+    print len(df)

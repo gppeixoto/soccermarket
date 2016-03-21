@@ -31,3 +31,11 @@ def get_age_season(transfers, queries):
     __assertEquals__(transfers, seasons)
     __assertEquals__(transfers, ages)
     return (ages, seasons)
+
+def get_next_page(driver, next_page):
+    next_page = str(next_page)
+    elems = driver.find_elements_by_xpath('//li[@class="page"]/a')
+    for elem in elems:
+        if elem.text == next_page:
+            break
+    return elem
