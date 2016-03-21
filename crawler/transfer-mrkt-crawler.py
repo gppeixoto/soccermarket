@@ -33,11 +33,11 @@ driver.get(SEED_URL)
 global_transfers = []
 DEBUG = True
 
-for next_page in xrange(2, 4):
+for next_page in xrange(2, 11):
     cur = 0
     print "current page: %d" % (next_page-1)
     print "waiting 30s..."
-    time.sleep(30)
+    time.sleep(15)
 
     print "parsing source code"
     source = driver.page_source
@@ -71,8 +71,9 @@ for next_page in xrange(2, 4):
         global_transfers.append(t)
         cur += 1
 
-    click_elem = get_next_page(driver, next_page)
-    click_elem.click()
+    if next_page != LAST_PAGE:
+        click_elem = get_next_page(driver, next_page)
+        click_elem.click()
 
 if DEBUG:
     df = pd.DataFrame([trf.to_tuple() for trf in global_transfers], columns=global_transfers[0].get_params_names())
