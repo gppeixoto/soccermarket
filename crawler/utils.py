@@ -41,7 +41,14 @@ def get_involved_teams(transfers, queries):
             from_.append(elem.text)
         if i % 4 == 3:
             to.append(elem.text)
+    __assertEquals__(transfers, from_)
+    __assertEquals__(transfers, to)
     return (from_, to)
+
+def get_transfer_values(transfers, queries):
+    ret = transfers[0].xpath(queries['transfer_values'])
+    __assertEquals__(transfers, ret)
+    return ret
 
 def get_next_page(driver, next_page):
     next_page = str(next_page)

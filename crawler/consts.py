@@ -7,5 +7,6 @@ queries = {
     "positions" : '//td/table/tbody/tr/td',
     "market_values": '//td[@class = "rechts"]/text()',
     "age_season" : '//td[@class="zentriert"]//text()',
-    "involved_teams": '//a[@class = "vereinprofil_tooltip"]'
+    "involved_teams": '//a[@class = "vereinprofil_tooltip"]',
+    "transfer_values": '//td[@class = "rechts hauptlink"]/a/text()'
 }
