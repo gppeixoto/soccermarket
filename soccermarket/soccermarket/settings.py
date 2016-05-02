@@ -17,7 +17,6 @@ PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -54,11 +53,18 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'soccermarket.urls'
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.load_template_source',
+    'django.template.loaders.app_directories.load_template_source',
+)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             PROJECT_PATH + '/templates',
+            ### ADD YOUR DIRECTORY HERE LIKE SO:
+            os.path.join(BASE_DIR, 'soccermarket/templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -132,3 +138,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+STATIC_URL = 'soccermarket/static/'
