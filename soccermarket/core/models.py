@@ -42,10 +42,10 @@ class Coach(Person):
 
 class Team(models.Model):
     name = models.CharField(max_length=100)
-    nameCompleto = models.CharField(max_length=100)
+    full_name = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
     badge = models.ImageField(upload_to = "assets/badges")
-    imagemCamisa = models.ImageField(upload_to = "assets/shirts")
+    kit_image = models.ImageField(upload_to = "assets/shirts")
 
 class Player_History(models.Model):
 	player = models.ForeignKey(Player, on_delete = models.CASCADE)
