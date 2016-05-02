@@ -47,7 +47,9 @@
 
       <div class="row">
        <div class="col-lg-12">
-        <form role="search" method="get" class="search-form">
+        <form role="search" class="search-form" method="post">
+          {% csrf_token %}
+          
           <div class="input-group full-width">
             <input type="search" id="searchj" name="s" class="form-control search" placeholder="Busca">
             <span class="input-group-btn">
