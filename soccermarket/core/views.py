@@ -88,6 +88,6 @@ def search(request):
         for i in teams:
             logger.info(i.name)
 
-        return render(request, 'soccermarket.html', { 'people': people_list, 
+        return render(request, 'search.html', { 'people': people_list, 
             'teams': teams, 'transfers': transfers })
     return redirect(reverse('index'))

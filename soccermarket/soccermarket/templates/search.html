@@ -1,0 +1,113 @@
+{% extends "soccermarket.html" %}
+
+{% block content %}
+
+  <!-- people -->
+  <table class="table table-bordered table-people" style="margin-top:50px">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th class="col-md-5 col-xs-5">Nome</th>
+        <th class="col-md-4 col-xs-4">Idade</th>
+        <th class="col-md-3 col-xs-3">Nacionalidade</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% if people %}
+        {% for person in people %}
+          <tr>
+            <th scope="row"> {{ forloop.counter }} </th>
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+            <td>{{ person.nationality }}</td>
+          </tr>
+          {% empty %}
+          <tr class="warning no-result">
+            <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr class="warning no-result">
+          <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
+        </tr>
+        <script>
+          $('.no-result').show();
+        </script>
+      {% endif %}
+    </tbody>
+  </table>
+
+  <!-- teams -->
+  <table class="table table-bordered table-teams" style="margin-top:50px;display:none">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th class="col-md-5 col-xs-5">Nome</th>
+        <th class="col-md-4 col-xs-4">Nome Completo</th>
+        <th class="col-md-3 col-xs-3">País</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% if teams %}
+        {% for team in teams %}
+          <tr>
+            <th scope="row"> {{ forloop.counter }} </th>
+            <td>{{ team.name }}</td>
+            <td>{{ team.full_name }}</td>
+            <td>{{ team.country }}</td>
+          </tr>
+          {% empty %}
+          <tr class="warning no-result">
+            <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr class="warning no-result">
+          <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
+        </tr>
+        <script>
+          $('.no-result').show();
+        </script>
+      {% endif %}
+    </tbody>
+  </table>
+
+  <!-- transfers -->
+  <table class="table table-bordered table-transfers" style="margin-top:50px;display:none">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th class="col-md-5 col-xs-5">Jogador</th>
+        <th class="col-md-4 col-xs-4">Origem</th>
+        <th class="col-md-3 col-xs-3">Destino</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% if transfers %}
+        {% for transfer in transfers %}
+          <tr>
+            <th scope="row"> {{ forloop.counter }} </th>
+            <td>{{ transfer.player.name }}</td>
+            <td>{{ transfer.origin.name }}</td>
+            <td>{{ transfer.destiny.name }}</td>
+          </tr>
+          {% empty %}
+          <tr class="warning no-result">
+            <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr class="warning no-result">
+          <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
+        </tr>
+        <script>
+          $('.no-result').show();
+        </script>
+      {% endif %}
+    </tbody>
+  </table>
+
+{% endblock %}
