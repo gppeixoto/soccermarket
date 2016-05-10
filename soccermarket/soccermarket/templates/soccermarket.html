@@ -21,29 +21,56 @@
 
   <script src="{% static "assets/js/table-search.js" %}"></script>
 
+  <!-- store search mode using cookis -->
+  <script>
+    $(function() {
+      var json, tabsState;
+      $('a[data-toggle="pill"], a[data-toggle="tab"]').on('click', function(e) {
+        var href, json, parentId, tabsState;
+        tabsState = localStorage.getItem("tabs-state");
+        json = JSON.parse(tabsState || "{}");
+        parentId = $(e.target).parents("ul.nav.nav-pills, ul.nav.nav-tabs").attr("id");
+        href = $(e.target).attr('href');
+        json[parentId] = href;
+
+        return localStorage.setItem("tabs-state", JSON.stringify(json));
+      });
+
+      tabsState = localStorage.getItem("tabs-state");
+      json = JSON.parse(tabsState || "{}");
+
+      $.each(json, function(containerId, href) {
+        return $("#" + containerId + " a[href=" + href + "]").tab('show');
+      });
+
+      $("ul.nav.nav-pills, ul.nav.nav-tabs").each(function() {
+        var $this = $(this);
+        if (!json[$this.attr("id")]) {
+          return $this.find("a[data-toggle=tab]:first, a[data-toggle=pill]:first").tab("show");
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
     <div class="container tim-container" style="max-width:800px; padding-top:100px">
       <img src="../static/assets/img/soccermarket.png" class="img-responsive center-block" alt="SoccerMarket"> 
 
-      <div class="text-center" style = "padding-top:100px">
-        <ul class="nav nav-pills ct-blue center-pills">
-          <li class="active" id="search-people"><a href="#people">Pessoas</a></li>
-          <li id="search-teams"><a href="#teams">Times</a></li>
-          <li id="search-transfers"><a href="#transfers">Transferências</a></li>
+      <div class="text-center" style="padding-top:100px">
+        <ul id="pills" class="nav nav-pills ct-blue center-pills">
+          <li id="search-people"><a href="#people" data-toggle="pill">Pessoas</a></li>
+          <li id="search-teams"><a href="#teams" data-toggle="pill">Times</a></li>
+          <li id="search-transfers"><a href="#transfers" data-toggle="pill">Transferências</a></li>
         </ul>
       </div>
 
       <!-- set search mode -->
       <script>
-        var liToSelect = 1;
-        $(".nav.nav-pills li:eq("+(liToSelect-1)+")").addClass("active");
-
-        $(".nav.nav-pills li").on("click",function(){
-          $(".nav.nav-pills li").removeClass("active");
-          $(this).addClass("active");
-        });
+        // $(".nav.nav-pills li").on("click",function(){
+        //   $(".nav.nav-pills li").removeClass("active");
+        //   $(this).addClass("active");
+        // });
       </script>
 
       <div class="row">
@@ -62,14 +89,14 @@
       </div>
      
       <!-- get currently active search mode and use it -->
-      <!-- JS function which sends a message to django and uses AJAX autocomplete
-           will change depending on the value set here -->
       <script>
-        document.getElementById("search-transfers").className
+        var navPills = document.getElementsByTagName("li");
+        for (i = 0; i < navPills.length; i++) {
+          console.log(navPills[i].id + " activity: " + navPills[i].className)
+        }
       </script>
 
-      <!-- a classe e o script de table-search vão ver substituidos por requests enviadas ao django -->
-      <!-- <table class="table table-bordered results table-search" style="margin-top:50px">
+      <table class="table table-bordered" style="margin-top:50px">
         <thead>
           <tr>
             <th>#</th>
@@ -77,54 +104,30 @@
             <th class="col-md-4 col-xs-4">Time</th>
             <th class="col-md-3 col-xs-3">Nacionalidade</th>
           </tr>
-          <tr class="warning no-result">
-            <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Kuki</td>
-            <td>Náutico</td>
-            <td>Brasil</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Magrão</td>
-            <td>Sport</td>
-            <td>Brasil</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Robinho</td>
-            <td>Atlético MG</td>
-            <td>Brasil</td>
-          </tr>
-        </tbody>
-      </table> -->
-
-      <table class="table table-bordered results table-search" style="margin-top:50px">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th class="col-md-5 col-xs-5">Nome</th>
-            <th class="col-md-4 col-xs-4">Time</th>
-            <th class="col-md-3 col-xs-3">Nacionalidade</th>
-          </tr>
-          <tr class="warning no-result">
-            <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
-          </tr>
         </thead>
 
         <tbody>
-          {% for person in people %}
-            <tr>
-              <th scope="row"> {{ forloop.counter }} </th>
-              <td>{{ person.name }}</td>
-              <td>A</td>
-              <td>{{ person.nationality }}</td>
+          {% if people %}
+            {% for person in people %}
+              <tr>
+                <th scope="row"> {{ forloop.counter }} </th>
+                <td>{{ person.name }}</td>
+                <td>A</td>
+                <td>{{ person.nationality }}</td>
+              </tr>
+              {% empty %}
+              <tr class="warning no-result">
+                <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr class="warning no-result">
+              <td colspan="4"><i class="fa fa-warning"></i>Nenhum resultado foi obtido</td>
             </tr>
-          {% endfor %}
+            <script>
+              $('.no-result').show();
+            </script>
+          {% endif %}
         </tbody>
       </table>
 
