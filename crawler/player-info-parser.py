@@ -3,18 +3,20 @@ import requests
 
 class Player:
     def __init__(self, url):
-        self.url = url
-        self.name = ''
-        self.dob = ''
-        self.pob = ''
+        self.url_profile = url
         self.age = 0
-        self.height = ''
+        self.name = ''
         self.nationality = ''
         self.position = ''
+        self.foot = 'R'
+        self.market_value = 0
+        self.shirt_number = 0
+        self.agent = ''
+
 
     def get_info_table(self):
         headers = {'User-Agent': consts.USER_AGENT}
-        tree = lxml.html.fromstring(requests.get(self.url, headers=headers).text)
+        tree = lxml.html.fromstring(requests.get(self.url_profile, headers=headers).text)
         infoTable = tree.xpath('//table[@class="auflistung"]')
         if infoTable:
             infoTable = infoTable[0]
@@ -36,6 +38,7 @@ class Player:
         elif i == 6:
             self.position = row.text.strip()
         elif i == 7:
+            self.
 
 
     def parse_info(self):
@@ -43,4 +46,3 @@ class Player:
         rows = [row.find('td') for row in rows]
         for i, row in enumerate(rows):
             self.parse_row(i, row)
-        
