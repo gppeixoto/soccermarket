@@ -42,7 +42,7 @@ for next_page in xrange(2, 11):
     print "parsing source code"
     source = driver.page_source
     tree = lxml.html.fromstring(source)
-    
+
     odds = tree.xpath(queries['odds'])
     evens = tree.xpath(queries['evens'])
     transfers = odds+evens
@@ -55,7 +55,7 @@ for next_page in xrange(2, 11):
     transfer_values = get_transfer_values(transfers, queries)
 
     del odds; del evens;
-    
+
     for t in transfers:
         img_elem = t.xpath(queries['img_elem'])[0]
         name = img_elem.get('alt')
