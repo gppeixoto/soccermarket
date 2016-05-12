@@ -15,13 +15,13 @@ class Player:
         self.foot = 'R'
         self.market_value = ''
         self.shirt_number = ''
-        self.agent = ''
-        self.parse_info()
+        self.agent = 'not informed'
 
     def parse_market_value(self):
         self.market_value = self.tree.xpath('//div[@class="right-td"]')[0]\
                                 .getchildren()[0]\
-                                .text
+                                .text[1:]
+                                
     def parse_jersey_number(self):
         nb = self.tree.xpath('//span[@class="dataRN"]')[0].text
         if nb.startswith("#"):
@@ -41,13 +41,17 @@ class Player:
         elif i == 3:
             self.age = row.text
         elif i == 5:
-            self.nationality = row.find('img').get('alt')
+            nationality = row.find('img').get('alt')
+            if nationality:
+                self.nationality = nationality
         elif i == 6:
             self.position = row.text.strip()
         elif i == 7:
             self.foot = row.text.strip()
         elif i == 8:
-            self.agent = row.getchildren()[0].text
+            agent = row.getchildren()[0].text
+            if agent is not None and agent != '':
+                self.agent = agent
 
 
     def parse_info(self):
