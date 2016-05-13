@@ -1,4 +1,5 @@
 import consts
+from consts import queries
 import requests
 import lxml.html
 
@@ -18,13 +19,17 @@ class Manager:
         self.win_percentage = ''
         self.preferred_formation = ''
 
-    def parse_info():
+    def parse_info(self):
         rows = self.get_info_table().findall('tr')
         rows = map(lambda row: row.find('th'), rows)
         for row in rows:
-            parse_row(row)
+            self.parse_row(row)
 
-    def parse_row(row):
+    def get_info_table(self):
+        table = self.tree.xpath('//table[@class="auflistung"]')[0]
+        return table
+
+    def parse_row(self, row):
         text = row.text.strip().lower()
         sibling = row.getnext()
         if 'name' in text:
@@ -36,10 +41,9 @@ class Manager:
         elif 'formation' in text:
             self.preferred_formation = sibling.text
         elif 'success rate' in text:
-            self.win_percentage = sibling.xpath(queries.win_percentage)[0].text
+            self.win_percentage = sibling.xpath(queries["win_percentage"])[0].text
 
     def to_csv(self):
-        csv = ",".join(self.name, self.age, self.nationality,
-                       self.win_percentage, self.preferred_formation
-                       )
+        csv = ",".join([self.name, self.age, self.nationality,\
+                        self.win_percentage, self.preferred_formation])
         return csv
