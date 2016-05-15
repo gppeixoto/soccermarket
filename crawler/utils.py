@@ -57,3 +57,6 @@ def get_next_page(driver, next_page):
         if elem.text == next_page:
             break
     return elem
+
+def normalize_string(string):
+    return string.encode('ascii', 'ignore').lower().strip()

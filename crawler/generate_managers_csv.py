@@ -10,12 +10,12 @@ if __name__ == "__main__":
                 try:
                     currentManager.parse_info()
                     toWrite = currentManager.to_csv()+"\n"
-                    if len(toWrite) < 10:
-                        raise Exception("error")
+                    if len(toWrite) < 10 or toWrite.startswith(','):
+                        raise Exception("Manager parsing error")
                     outfile.write(toWrite)
-                    print "\tparsed correctly manager #%d" % i
+                    print "parsed correctly manager #%d" % i
                 except Exception as e:
-                    print "\tparsing error on manager #%d" % i
-                    print "\t"+str(e)
+                    print "parsing error on manager #%d" % i
+                    print str(e)
                 finally:
                     print
