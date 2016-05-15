@@ -46,5 +46,6 @@ class Manager:
 
     def to_csv(self):
         csv = ",".join([self.name, self.age, self.nationality,\
-                        self.win_percentage, self.preferred_formation])
+                        self.win_percentage, self.preferred_formation,\
+                        self.url_profile])
         return csv
