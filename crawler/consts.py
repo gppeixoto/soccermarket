@@ -3,7 +3,7 @@ PLAYER_SEEDS = "http://www.transfermarkt.co.uk/premier-league/marktwertaenderung
 MANAGERS_SEED = "http://www.transfermarkt.de/trainer/verfuegbaretrainer/statistik?statistik=&plus=2&page="
 TEAMS_SEED = "http://www.transfermarkt.co.uk/spieler-statistik/wertvollstemannschaften/marktwertetop"
 MANAGERS_PREFIX = "http://www.transfermarkt.co.uk"
-
+PREFIX = "http://www.transfermarkt.co.uk"
 USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5'"
 HEADERS = {'User-Agent': USER_AGENT}
 LAST_PAGE = 10

@@ -19,8 +19,7 @@ class Player:
 
     def parse_market_value(self):
         self.market_value = self.tree.xpath('//div[@class="right-td"]')[0]\
-                                .getchildren()[0]\
-                                .text[1:]
+                                .text.strip().encode("ascii", "ignore")
                                 
     def parse_jersey_number(self):
         nb = self.tree.xpath('//span[@class="dataRN"]')[0].text

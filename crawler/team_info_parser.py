@@ -15,6 +15,7 @@ class Team:
         self.kit_image = ''
         self.full_name = ''
         self.players_urls = []
+        self.players = []
 
     def parse_full_name(self):
         self.full_name = self.tree.xpath('//div[@class="spielername-profil"]')[0]\
@@ -35,7 +36,7 @@ class Team:
                                 .get("href")
 
     def parse_players_urls(self):
-        response = tree.xpath(consts.queries["team_players"])
+        response = self.tree.xpath(consts.queries["team_players"])
         self.players_urls = [res.get('href') for res in response]
 
     def parse_info(self):
@@ -50,6 +51,7 @@ class Team:
             self.full_name,\
             self.badge,\
             self.country,\
-            self.url_profile
+            self.url_profile,\
+            str(self.players_urls)
         ])
         return csv
