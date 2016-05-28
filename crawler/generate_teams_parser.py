@@ -30,6 +30,7 @@ def main():
                         print "\tparsed player %s" % current_player.name
                     except Exception as e:
                         print "\tparsing error on %s" % player
+                        print str(e)
                 print "\nparsed %d players" % num_players
                 setattr(current_team, "tree", None)
                 with open("../data/teams/team%d.p" % i, "w") as teamfile:

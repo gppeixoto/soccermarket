@@ -1,6 +1,14 @@
 import consts
 import requests
 import lxml.html
+from utils import get_team_id_from_url as get_id
+
+class Transfer:
+    def __init__(self, date, origin_id, dest_id, value):
+        self.date = date
+        self.origin_id = origin_id
+        self.dest_id = dest_id
+        self.value = value
 
 class Player:
     def __init__(self, url):
@@ -16,11 +24,12 @@ class Player:
         self.market_value = ''
         self.shirt_number = ''
         self.agent = 'not informed'
+        self.transfer_history = []
 
     def parse_market_value(self):
         self.market_value = self.tree.xpath('//div[@class="right-td"]')[0]\
                                 .text.strip().encode("ascii", "ignore")
-                                
+
     def parse_jersey_number(self):
         nb = self.tree.xpath('//span[@class="dataRN"]')[0].text
         if nb.startswith("#"):
@@ -52,6 +61,22 @@ class Player:
             if agent is not None and agent != '':
                 self.agent = agent
 
+    def parse_transfer_history(self):
+        transfers = self.tree.xpath("//tr[@class='zeile-transfer']")
+        for transfer in transfers:
+            date = transfer.xpath('td[@class="zentriert hide-for-small"]')[1]\
+                            .text.strip()
+            origin = transfer.xpath('*/a[@class="vereinprofil_tooltip"]')[2]\
+                            .get('href')
+            origin_id = get_id(origin)
+            dest = transfer.xpath('*/a[@class="vereinprofil_tooltip"]')[5]\
+                            .get('href')
+            dest_id = get_id(dest)
+            value = transfer.xpath('td[@class="zelle-abloese"]')[0].text\
+                            .strip().encode('ascii', 'ignore')
+            self.transfer_history.append(
+                Transfer(date, origin_id, dest_id, value)
+            )
 
     def parse_info(self):
         rows = self.get_info_table().findall('tr')
@@ -60,6 +85,7 @@ class Player:
             self.parse_row(i, row)
         self.parse_market_value()
         self.parse_jersey_number()
+        self.parse_transfer_history()
 
     def to_csv(self):
         csv = ",".join([\

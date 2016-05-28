@@ -1,3 +1,5 @@
+import re
+
 def __assertEquals__(transfers, other):
     assert(len(transfers) == len(other))
 
@@ -60,3 +62,10 @@ def get_next_page(driver, next_page):
 
 def normalize_string(string):
     return string.encode('ascii', 'ignore').lower().strip()
+
+def get_team_id_from_url(team_url):
+    match = re.search('verein', team_url)
+    substr = team_url[match.end()+1:]
+    substr = substr[:re.search('/', substr).end()-1]
+    team_id = int(substr)
+    return team_id
