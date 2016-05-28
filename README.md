@@ -1,8 +1,12 @@
 # soccermarket
 
-#install django
-pip install django
+### Dependencies:
+- django
+- pillow
+- cPickle
+- requests
+- lxml
+- selenium
 
-#install pillow
-pip install pillow
- 
+### Install dependency:
+- `pip install <package_name>`
