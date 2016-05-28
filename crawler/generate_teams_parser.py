@@ -24,6 +24,7 @@ def main():
                     current_player = Player(consts.PREFIX + player)
                     try:
                         current_player.parse_info()
+                        print current_player.transfer_history
                         setattr(current_player, "tree", None)
                         current_team.players.append(current_player)
                         num_players += 1
@@ -33,10 +34,11 @@ def main():
                         print str(e)
                 print "\nparsed %d players" % num_players
                 setattr(current_team, "tree", None)
-                with open("../data/teams/team%d.p" % i, "w") as teamfile:
+                with open("../data/team%d.p" % i, "w") as teamfile:
                     pickle.dump(current_team, teamfile)
             except Exception as e:
                 print "\tparsing error on team #%d" % i
+                print str(e)
             finally:
                 print
                 print "#"*40

@@ -10,6 +10,9 @@ class Transfer:
         self.dest_id = dest_id
         self.value = value
 
+    def __str__(self):
+        return ",".join([date, str(origin_id), str(dest_id), value])
+
 class Player:
     def __init__(self, url):
         self.tree = lxml.html.fromstring(
