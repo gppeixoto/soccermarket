@@ -32,7 +32,7 @@ def main():
                         print "\tparsing error on %s" % player
                 print "\nparsed %d players" % num_players
                 setattr(current_team, "tree", None)
-                with open("team%d.p" % i, "w") as teamfile:
+                with open("../data/teams/team%d.p" % i, "w") as teamfile:
                     pickle.dump(current_team, teamfile)
             except Exception as e:
                 print "\tparsing error on team #%d" % i
