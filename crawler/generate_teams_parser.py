@@ -2,6 +2,7 @@ import team_info_parser
 import consts
 from player_info_parser import Player
 from team_info_parser import Team
+from manager_info_parser import Manager
 import cPickle as pickle
 
 def main():
@@ -12,6 +13,12 @@ def main():
             current_team = Team(team_url)
             try:
                 current_team.parse_info()
+                print "\tmanager_url: %s" % current_team.manager_url
+                manager = Manager(consts.PREFIX + current_team.manager_url)
+                manager.parse_info()
+                setattr(manager, "tree", None)
+                setattr(current_team, "manager", manager)
+                print "\tparsed manager %s" % current_team.manager.name
                 num_players = 0
                 for player in current_team.players_urls:
                     current_player = Player(consts.PREFIX + player)
@@ -20,7 +27,7 @@ def main():
                         setattr(current_player, "tree", None)
                         current_team.players.append(current_player)
                         num_players += 1
-                        print "\tparsed player %s" % player
+                        print "\tparsed player %s" % current_player.name
                     except Exception as e:
                         print "\tparsing error on %s" % player
                 print "\nparsed %d players" % num_players

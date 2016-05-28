@@ -11,11 +11,13 @@ class Team:
         self.name = ''
         self.country = ''
         self.badge = ''
-        self.coach_url = ''
+        self.manager_url = ''
         self.kit_image = ''
         self.full_name = ''
         self.players_urls = []
+        # "Internal objects" section
         self.players = []
+        self.manager = None
 
     def parse_full_name(self):
         self.full_name = self.tree.xpath('//div[@class="spielername-profil"]')[0]\
@@ -31,8 +33,8 @@ class Team:
         self.country = self.tree.xpath('//td[@itemprop="addressLocality"]')[0]\
                                 .text
 
-    def parse_coachUrl(self):
-        self.coach_url = self.tree.xpath('//div[@class="container-hauptinfo"]')[0]\
+    def parse_manager_url(self):
+        self.manager_url = self.tree.xpath(consts.queries["team_manager"])[0]\
                                 .get("href")
 
     def parse_players_urls(self):
@@ -43,7 +45,7 @@ class Team:
         self.parse_full_name()
         self.parse_badge()
         self.parse_country()
-        self.parse_coachUrl()
+        self.parse_manager_url()
         self.parse_players_urls()
 
     def to_csv(self):

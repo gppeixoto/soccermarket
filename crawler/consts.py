@@ -18,5 +18,6 @@ queries = {
     "involved_teams": '//a[@class = "vereinprofil_tooltip"]',
     "transfer_values": '//td[@class = "rechts hauptlink"]/a/text()',
     "win_percentage": '//span[contains(text(), "Wins")]',
-    "team_players": "//span[@class='hide-for-small']/a[@class='spielprofil_tooltip']"
+    "team_players": "//span[@class='hide-for-small']/a[@class='spielprofil_tooltip']",
+    "team_manager": '//div[@class="container-inhalt"]/div[@class="container-hauptinfo"]/a[@id = 0]'
 }
