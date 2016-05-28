@@ -34,18 +34,22 @@ class Team:
         self.coach_url = self.tree.xpath('//div[@class="container-hauptinfo"]')[0]\
                                 .get("href")
 
+    def parse_players_urls(self):
+        response = tree.xpath(consts.queries["team_players"])
+        self.players_urls = [res.get('href') for res in response]
+
     def parse_info(self):
         self.parse_full_name()
         self.parse_badge()
         self.parse_country()
         self.parse_coachUrl()
-
+        self.parse_players_urls()
 
     def to_csv(self):
         csv = ",".join([\
             self.full_name,\
             self.badge,\
             self.country,\
-            self.url_profile\
+            self.url_profile
         ])
         return csv
