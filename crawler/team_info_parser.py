@@ -14,8 +14,8 @@ class Team:
         self.coach_url = ''
         self.kit_image = ''
         self.full_name = ''
-        self.playersUrls = []
-        
+        self.players_urls = []
+
     def parse_full_name(self):
         self.full_name = self.tree.xpath('//div[@class="spielername-profil"]')[0]\
                                 .getchildren()[0]\

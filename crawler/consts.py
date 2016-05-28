@@ -17,5 +17,6 @@ queries = {
     "age_season" : '//td[@class="zentriert"]//text()',
     "involved_teams": '//a[@class = "vereinprofil_tooltip"]',
     "transfer_values": '//td[@class = "rechts hauptlink"]/a/text()',
-    "win_percentage": '//span[contains(text(), "Wins")]'
+    "win_percentage": '//span[contains(text(), "Wins")]',
+    "team_players": "//span[@class='hide-for-small']/a[@class='spielprofil_tooltip']"
 }
