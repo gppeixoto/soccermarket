@@ -1,2 +1,8 @@
+# Python compiled files
 *.pyc
+
+# Mac files
 .DS_STORE
+
+# Utils
+*.txt

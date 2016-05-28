@@ -21,6 +21,12 @@ class Manager:
         rows = map(lambda row: row.find('th'), rows)
         for row in rows:
             self.parse_row(row)
+        if self.name == '' or self.name == None:
+            name_attempt = self.tree.xpath("//div[@itemprop='name']/h1")
+            if name_attempt == '' or name_attempt == None:
+                raise Exception("manager parsing error") 
+            else:
+                self.name = normalize_string(name_attempt[0].text)
 
     def get_info_table(self):
         table = self.tree.xpath('//table[@class="auflistung"]')[0]
