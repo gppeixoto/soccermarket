@@ -66,6 +66,6 @@ def normalize_string(string):
 def get_team_id_from_url(team_url):
     match = re.search('verein', team_url)
     substr = team_url[match.end()+1:]
-    substr = substr[:re.search('/', substr).end()-1]
+    # substr = substr[:re.search('/', substr).end()-1]
     team_id = int(substr)
     return team_id

@@ -84,7 +84,8 @@ class Transfer(models.Model):
     date = models.DateField()
 
     def __unicode__(self):
-        return self.origin.name + " - " + self.player.name + " - " + self.destiny.name
+        origin = self.origin.name if self.origin is not None else ''
+        return origin + " - " + self.player.name + " - " + self.destiny.name
 
     class Meta:
         verbose_name = "Transferencia"

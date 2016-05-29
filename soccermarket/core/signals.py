@@ -1,12 +1,30 @@
 from django.dispatch import receiver
 from django.db.models.signals import pre_save, post_save
+from django.core.exceptions import ObjectDoesNotExist
 from models import Transfer, Plays, History
 
+def add_history(player, team):
+    try:
+        History.objects.get(player = player, team = team)
+    except ObjectDoesNotExist:
+        History.objects.create(player = player, team = team)
+
 def remove_player(player, team):
-    Plays.objects.get(player = player, team = team).delete()
+    try:
+        Plays.objects.get(player = player, team = team).delete()
+    except ObjectDoesNotExist: 
+        print "Player already did not play for this team"
+        add_history(player, team)
 
 def add_player(player, team):
-    Plays.objects.update_or_create(player = player, team = team)
+    try:
+        Plays.objects.get(player = player, team = team)
+    except ObjectDoesNotExist:
+        try:
+            Plays.objects.get(player = player).delete()
+        except ObjectDoesNotExist:
+            print "Player added to new team"
+        Plays.objects.create(player = player, team = team)
 
 @receiver(pre_save, sender = Transfer)
 def execute_transfer(sender, **kwargs):
@@ -22,4 +40,4 @@ def execute_transfer(sender, **kwargs):
 def add_to_history(sender, created, instance, **kwargs):
     player = instance.player
     new_team = instance.team
-    History.objects.create(player = player, team = new_team)
+    add_history(player, new_team)

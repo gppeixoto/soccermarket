@@ -3,14 +3,17 @@ import imp
 import sys
 from os import path
 import models
+from datetime import datetime
 
 sys.path.append(path.abspath(path.join(path.dirname(__file__), '../../crawler')))
 
-# from team_info_parser import Team
-# from manager_info_parser import Manager
-# from player_info_parser import Transfer, Player
+import consts
+from team_info_parser import Team
+from utils import get_team_id_from_url as get_id
 
 data_path = "../data/"
+
+team_ids = {}
 
 def parse_win_percentage(win_percentage):
     if not win_percentage:
@@ -58,12 +61,26 @@ def parse_foot(foot):
     else:
         return 'R'
 
+def parse_team(team_id):
+    try:
+        name = team_ids[team_id]
+        return models.Team.objects.get(name = name)
+    except Exception:
+        return None
+
+def parse_date(date):
+    try:
+        return datetime.strptime(date, '%b %d, %Y').date()
+    except Exception:
+        print date
+
 def populate_teams():
     for i in xrange(100):
         filename = data_path + "team" + str(i) + ".p"
         with open(filename, "r") as file:
             team = pickle.load(file)
             team.name = team.full_name
+            team_ids[get_id(team.url_profile)] = team.name
             models.Team.objects.update_or_create(name = team.name, full_name = team.full_name, country = team.country, badge = team.badge)
             print "Team " + repr(team.name) + " was added to the database"
             populate_manager(team)
@@ -89,18 +106,35 @@ def populate_players(team):
         value = parse_market_value(player.market_value)
         shirt_number = parse_number(player.age)
         foot = parse_foot(player.foot)
+
+        if player.name == '':
+            return
+
         models.Player.objects.update_or_create(name = player.name, age = age, nationality = player.nationality, position = position, 
             market_value = value, dominant_foot = foot, shirt_number = shirt_number, agent = player.agent, url_profile = player.url_profile)
         print "Player " + repr(player.name) + " was added to the database"
-        # bd_team = models.Team.objects.get(name = team.name)
-        # bd_player = models.Player.objects.get(name = player.name)
-        # models.Plays.objects.update_or_create(player = bd_player, team = bd_team)
+
+        populate_transfers(player)
+
+        bd_team = models.Team.objects.get(name = team.name)
+        bd_player = models.Player.objects.get(name = player.name)
+        models.Plays.objects.update_or_create(player = bd_player, team = bd_team)
+
+def populate_transfers(player):
+    transfer_history = player.transfer_history
+    for transfer in transfer_history:
+        origin = parse_team(transfer.origin_id)
+        destination = parse_team(transfer.dest_id)
+        value = parse_market_value(transfer.value)
+        date = parse_date(transfer.date)
+        if destination is not None and origin is not None:
+            bd_player = models.Player.objects.get(name = player.name)
+            models.Transfer.objects.create(player = bd_player, destiny = destination, origin = origin, value = value, date = date)
 
 def clear_bd():
     models.Player.objects.all().delete()
     models.Coach.objects.all().delete()
     models.Team.objects.all().delete()
-
 
 def populate():
     clear_bd()
