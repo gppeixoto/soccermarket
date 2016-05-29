@@ -8,7 +8,8 @@ POSITIONS = (
     ('RB', 'Lateral direito'),
     ('CB', 'Zagueiro'),
     ('LB', 'Lateral esquerdo'),
-    ('CM', 'Volante'),
+    ('DM', 'Volante'),
+    ('CM', 'Meia central'),
     ('AM', 'Meia avancado'),
     ('RM', 'Ponta direita'),
     ('LM', 'Ponta esquerda'),
@@ -56,7 +57,6 @@ class Team(models.Model):
     full_name = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
     badge = models.URLField(blank = True, null = True)
-    kit_image = models.URLField(blank = True, null = True)
 
     def __unicode__(self):
         return self.name
@@ -82,7 +82,6 @@ class Transfer(models.Model):
     origin = models.ForeignKey(Team, null = True, on_delete = models.CASCADE, related_name = 'team_origin', blank = True)
     value = models.DecimalField(null = True, max_digits = 20, decimal_places = 2, blank = True)
     date = models.DateField()
-    is_top = models.BooleanField(default = False)
 
     def __unicode__(self):
         return self.origin.name + " - " + self.player.name + " - " + self.destiny.name
@@ -94,9 +93,6 @@ class Transfer(models.Model):
 class Plays(models.Model):
     player = models.ForeignKey(Player, on_delete = models.CASCADE)
     team = models.ForeignKey(Team, on_delete = models.CASCADE)
-    contract_ends = models.DateField(auto_now_add = False, null = True, blank = True) 
-    on_loan = models.BooleanField(default = False)
-    is_capitan = models.BooleanField(default = False)
 
     def __unicode__(self):
         return self.player.name + " - " + self.team.name
@@ -108,8 +104,6 @@ class Plays(models.Model):
 class Coaches(models.Model):
     coach = models.ForeignKey(Coach, on_delete = models.CASCADE)
     team = models.ForeignKey(Team, on_delete = models.CASCADE)
-    contract_ends = models.DateField(auto_now_add = False, null = True, blank = True)
-    coach_term = models.DurationField(null = True, blank = True)
 
     def __unicode__(self):
         return self.coach.name + " - " + self.team.name
