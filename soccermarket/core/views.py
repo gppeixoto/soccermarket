@@ -18,27 +18,27 @@ logging.basicConfig(
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # Dangerous line of code below; will clear everything in the database
-Player.objects.all().delete()
-Coach.objects.all().delete()
-Team.objects.all().delete();
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Player.objects.all().delete()
+# Coach.objects.all().delete()
+# Team.objects.all().delete();
+# # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-player = Player(age='12', name='Asdolfo', nationality='Botsuana', position='GK', market_value='9', dominant_foot='R', shirt_number='9', agent='ackbar', url_profile='http://www.vini.com')
-logger.info('PLAYER CREATED')
+# player = Player(age='12', name='Asdolfo', nationality='Botsuana', position='GK', market_value='9', dominant_foot='R', shirt_number='9', agent='ackbar', url_profile='http://www.vini.com')
+# logger.info('PLAYER CREATED')
 
-coach = Coach(age='2', name='Asdolfsky', nationality='Russia', preferred_formation='4-3-3', win_percentage='21')
-logger.info('COACH CREATED')
+# coach = Coach(age='2', name='Asdolfsky', nationality='Russia', preferred_formation='4-3-3', win_percentage='21')
+# logger.info('COACH CREATED')
 
-team = Team(name='Timao', full_name="Timao e Pumba", country="Brazil", badge="http://www.vini.com", kit_image='http://www.vini.com')
-logger.info("TEAM CREATED")
+# team = Team(name='Timao', full_name="Timao e Pumba", country="Brazil", badge="http://www.vini.com", kit_image='http://www.vini.com')
+# logger.info("TEAM CREATED")
 
-team2 = Team(name='Nautico', full_name="Clube Nautico Capibaribe", country="Brazil", badge="http://www.vini.com", kit_image='http://www.vini.com')
-logger.info("ANOHER TEAM CREATED")
+# team2 = Team(name='Nautico', full_name="Clube Nautico Capibaribe", country="Brazil", badge="http://www.vini.com", kit_image='http://www.vini.com')
+# logger.info("ANOHER TEAM CREATED")
 
-player.save()
-coach.save()
-team.save()
-team2.save();
+# player.save()
+# coach.save()
+# team.save()
+# team2.save();
 
 #################################
 
