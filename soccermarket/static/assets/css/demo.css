@@ -322,3 +322,21 @@
     margin: 0;
     line-height: 40px;
 }
+.footer {
+    margin-top: 16px;
+}
+.footer img {
+    max-width: 100%;
+}
+.transfer .row {
+    margin-top: 16px;
+}
+.transfer h1 {
+    margin: 15px 0;
+}
+.player .nome-campo {
+    color: gray;
+}
+.player .campo {
+    font-weight: bold;
+}

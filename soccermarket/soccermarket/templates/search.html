@@ -16,11 +16,17 @@
     <tbody>
       {% if people %}
         {% for person in people %}
-          <tr>
+          <tr onclick="$('#person{{ forloop.counter }}')[0].submit()" style="cursor: pointer">
             <th scope="row"> {{ forloop.counter }} </th>
             <td>{{ person.name }}</td>
             <td>{{ person.age }}</td>
             <td>{{ person.nationality }}</td>
+            <td style="display: none">
+              <form id="person{{ forloop.counter }}" method="POST" action="{% url 'player' %}">
+                {% csrf_token %}
+                <input name="name" type="hidden" value="{{ person.name }}"></input>
+              </form>
+            </td>
           </tr>
           {% empty %}
           <tr class="warning no-result">
@@ -52,11 +58,17 @@
     <tbody>
       {% if teams %}
         {% for team in teams %}
-          <tr>
+          <tr onclick="$('#team{{ forloop.counter }}')[0].submit()" style="cursor: pointer">
             <th scope="row"> {{ forloop.counter }} </th>
             <td>{{ team.name }}</td>
             <td>{{ team.full_name }}</td>
             <td>{{ team.country }}</td>
+            <td style="display: none">
+              <form id="team{{ forloop.counter }}" method="POST" action="{% url 'team' %}">
+                {% csrf_token %}
+                <input name="name" type="hidden" value="{{ team.name }}"></input>
+              </form>
+            </td>
           </tr>
           {% empty %}
           <tr class="warning no-result">
@@ -88,11 +100,19 @@
     <tbody>
       {% if transfers %}
         {% for transfer in transfers %}
-          <tr>
+          <tr onclick="$('#transfer{{ forloop.counter }}')[0].submit()" style="cursor: pointer">
             <th scope="row"> {{ forloop.counter }} </th>
             <td>{{ transfer.player.name }}</td>
             <td>{{ transfer.origin.name }}</td>
             <td>{{ transfer.destiny.name }}</td>
+            <td style="display: none">
+              <form id="transfer{{ forloop.counter }}" method="POST" action="{% url 'transfer' %}">
+                {% csrf_token %}
+                <input name="name" type="hidden" value="{{ transfer.player.name }}"></input>
+                <input name="origin" type="hidden" value="{{ transfer.origin.name }}"></input>
+                <input name="destiny" type="hidden" value="{{ transfer.destiny.name }}"></input>
+              </form>
+            </td>
           </tr>
           {% empty %}
           <tr class="warning no-result">
