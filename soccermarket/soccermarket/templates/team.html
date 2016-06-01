@@ -1,0 +1,54 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+{% if team %}
+        {% for team in team %}
+<div class="team">
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<img src="{{ team.badge }}" style="width: 128px; float: right;">
+		</div>
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<div class="row">
+				<h1>{{ team.name }}<br>{{ team.country }}</h1>
+			</div>
+			<!-- <div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Nome completo:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">Neymar da Silva Santos Júnior</div>
+			</div> -->
+			<!-- <div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Local de Nascimento:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.name }}</div>
+			</div> -->
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Treinador:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo"></div>
+			</div>
+			<div class="row" style="margin-top: 16px;">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 campo">Neymar<br>Atacante</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">Brasil</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">£ 10 M</div>
+			</div>
+			<div class="row" style="margin-top: 16px;">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 campo">Neymar<br>Atacante</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">Brasil</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">£ 10 M</div>
+			</div>
+			<div class="row" style="margin-top: 16px;">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 campo">Neymar<br>Atacante</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">Brasil</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">£ 10 M</div>
+			</div>
+			<div class="row" style="margin-top: 16px;">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 campo">Neymar<br>Atacante</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">Brasil</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo">£ 10 M</div>
+			</div>
+		</div>
+	</div>
+</div>
+    {% endfor %}
+  {% endif %}
+
+{% endblock %}

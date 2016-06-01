@@ -46,6 +46,46 @@ logging.basicConfig(
 def index(request):
     return render(request, 'soccermarket.html')
 
+def team(request):
+    if request.method == 'POST':
+        logger.info('POST OK')
+        name = request.POST['name']
+
+        team = Team.objects.filter(
+            Q(name__contains=name)
+            )
+
+        return render(request, 'team.html', { 'team': team })
+    return render(request, 'team.html')
+
+def player(request):
+    if request.method == 'POST':
+        logger.info('POST OK')
+        name = request.POST['name']
+
+        player = Player.objects.filter(
+            Q(name__contains=name)
+            )
+
+        return render(request, 'player.html', { 'player': player })
+    return render(request, 'player.html')
+    
+def transfer(request):
+    if request.method == 'POST':
+        logger.info('POST OK')
+        name = request.POST['name']
+        origin = request.POST['origin']
+        destiny = request.POST['destiny']
+
+        transfer = Transfer.objects.filter(
+            Q(player__name__contains=name) & 
+            Q(destiny__name__contains=destiny) &
+            Q(origin__name__contains=origin)
+            )
+
+        return render(request, 'transfer.html', { 'transfer': [transfer[0]] })
+    return render(request, 'transfer.html')
+
 def search(request): 
     logger.info('searching all things')
     if request.method == 'POST':

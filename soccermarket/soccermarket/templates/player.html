@@ -1,0 +1,58 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+      {% if player %}
+        {% for person in player %}
+<div class="player">
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<img src="https://www.procademia.com/uploads/testimonial/e5960d60449f25a538de6363c951faef889c1160.png" style="width: 128px; float: right;">
+		</div>
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<div class="row">
+				<h1>{{ person.name }}</h1>
+			</div>
+			<!-- <div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Nome completo:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">Neymar da Silva Santos Júnior</div>
+			</div> -->
+			<!-- <div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Local de Nascimento:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.name }}</div>
+			</div> -->
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Idade:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.age }}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Nacionalidade:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.nationality }}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Posição:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo" id="position">{{ person.position }}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Pé:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo" id="dominant_foot">{{ person.dominant_foot }}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Empresário:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.agent }}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Clube Atual:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.club }}</div>
+			</div>
+			<script type="text/javascript">
+				$('#position')[0].innerHTML = '{{ person.position }}'.replace('GK', 'Goleiro').replace('RB', 'Lateral direito').replace('CB', 'Zagueiro').replace('LB', 'Lateral esquerdo').replace('DM', 'Volante').replace('CM', 'Meia central').replace('AM', 'Meia avancado').replace('RM', 'Ponta direita').replace('LM', 'Ponta esquerda').replace('CF', 'Atacante');
+				$('#dominant_foot')[0].innerHTML = '{{ person.dominant_foot }}'.replace('R', 'Destro').replace('L', 'Canhoto');
+			</script>
+		</div>
+	</div>
+</div>
+        {% endfor %}
+      {% endif %}
+
+{% endblock %}
