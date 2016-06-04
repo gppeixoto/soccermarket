@@ -27,17 +27,30 @@ class Player:
         self.market_value = ''
         self.shirt_number = ''
         self.agent = 'not informed'
+        self.image_url = ''
         self.transfer_history = []
 
     def parse_market_value(self):
-        self.market_value = self.tree.xpath('//div[@class="right-td"]')[0]\
+        try: 
+            self.market_value = self.tree.xpath('//div[@class="right-td"]')[0]\
                                 .text.strip().encode("ascii", "ignore")
+        except Exception as e:
+            print "could not load market value"
 
     def parse_jersey_number(self):
-        nb = self.tree.xpath('//span[@class="dataRN"]')[0].text
-        if nb.startswith("#"):
-            nb = nb[1:]
-        self.shirt_number = nb
+        try:
+            nb = self.tree.xpath('//span[@class="dataRN"]')[0].text
+            if nb.startswith("#"):
+                nb = nb[1:]
+            self.shirt_number = nb
+        except Exception as e:
+            print "could not load jersey number"   
+
+    def parse_picture(self):
+        self.image_url = self.tree.xpath('//div[@class="dataBild"]')[0]\
+                                .getchildren()[0]\
+                                .get("src")
+
 
     def get_info_table(self):
         headers = {'User-Agent': consts.USER_AGENT}
@@ -52,34 +65,43 @@ class Player:
         elif i == 3:
             self.age = row.text
         elif i == 5:
-            nationality = row.find('img').get('alt')
-            if nationality:
-                self.nationality = nationality
+            try:
+                nationality = row.find('img').get('alt')
+                if nationality:
+                    self.nationality = nationality
+            except Exception as e:
+                print "could not load nationality"
         elif i == 6:
             self.position = row.text.strip()
         elif i == 7:
             self.foot = row.text.strip()
         elif i == 8:
-            agent = row.getchildren()[0].text
-            if agent is not None and agent != '':
-                self.agent = agent
+            try:
+                agent = row.getchildren()[0].text
+                if agent is not None and agent != '':
+                    self.agent = agent
+            except Exception as e:
+                print "Could not load agent"
 
     def parse_transfer_history(self):
         transfers = self.tree.xpath("//tr[@class='zeile-transfer']")
-        for transfer in transfers:
-            date = transfer.xpath('td[@class="zentriert hide-for-small"]')[1]\
-                            .text.strip()
-            origin = transfer.xpath('*/a[@class="vereinprofil_tooltip"]')[2]\
-                            .get('href')
-            origin_id = get_id(origin)
-            dest = transfer.xpath('*/a[@class="vereinprofil_tooltip"]')[5]\
-                            .get('href')
-            dest_id = get_id(dest)
-            value = transfer.xpath('td[@class="zelle-abloese"]')[0].text\
-                            .strip().encode('ascii', 'ignore')
-            self.transfer_history.append(
-                Transfer(date, origin_id, dest_id, value)
-            )
+        try:
+            for transfer in transfers:
+                date = transfer.xpath('td[@class="zentriert hide-for-small"]')[1]\
+                                .text.strip()
+                origin = transfer.xpath('*/a[@class="vereinprofil_tooltip"]')[2]\
+                                .get('href')
+                origin_id = get_id(origin)
+                dest = transfer.xpath('*/a[@class="vereinprofil_tooltip"]')[5]\
+                                .get('href')
+                dest_id = get_id(dest)
+                value = transfer.xpath('td[@class="zelle-abloese"]')[0].text\
+                                .strip().encode('ascii', 'ignore')
+                self.transfer_history.append(
+                    Transfer(date, origin_id, dest_id, value)
+                )
+        except Exception as e:
+            print "could not load transfers for " + self.name
 
     def parse_info(self):
         rows = self.get_info_table().findall('tr')
@@ -89,6 +111,7 @@ class Player:
         self.parse_market_value()
         self.parse_jersey_number()
         self.parse_transfer_history()
+        self.parse_picture()
 
     def to_csv(self):
         csv = ",".join([\

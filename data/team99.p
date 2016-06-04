@@ -82,2095 +82,3203 @@ p39
 Player
 p41
 (dp42
-S'market_value'
+S'image_url'
 p43
-S'1.50m'
+S'http://akacdn.transfermarkt.de/images/portrait/header/177547-1442915018.jpg?lm=1442915033'
 p44
+sS'market_value'
+p45
+S'1.50m'
+p46
 sg5
 VMatheus Lima Magalhães
-p45
+p47
 sg6
 S'http://www.transfermarkt.co.uk/matheus/profil/spieler/177547'
-p46
-sS'age'
-p47
-S'23'
 p48
+sS'age'
+p49
+S'23'
+p50
 sg11
 NsS'agent'
-p49
-S'not informed'
-p50
-sS'shirt_number'
 p51
-S'92'
+S'not informed'
 p52
-sS'position'
+sS'shirt_number'
 p53
-S'Goalkeeper'
+S'92'
 p54
-sS'foot'
+sS'position'
 p55
-S'right'
+S'Goalkeeper'
 p56
-sS'nationality'
+sS'foot'
 p57
-S'Brazil'
+S'right'
 p58
-sS'transfer_history'
+sS'nationality'
 p59
-(lp60
+S'Brazil'
+p60
+sS'transfer_history'
+p61
+(lp62
 (iplayer_info_parser
 Transfer
-p61
-(dp62
-S'date'
 p63
-S'Jul 1, 2014'
-p64
-sS'dest_id'
+(dp64
+S'date'
 p65
+S'Jul 1, 2014'
+p66
+sS'dest_id'
+p67
 I1075
 sS'value'
-p66
-S'600k'
-p67
-sS'origin_id'
 p68
+S'600k'
+p69
+sS'origin_id'
+p70
 I2863
 sba(iplayer_info_parser
 Transfer
-p69
-(dp70
-g63
-S'Jan 1, 2011'
 p71
-sg65
+(dp72
+g65
+S'Jan 1, 2011'
+p73
+sg67
 I2863
-sg66
-S'-'
 sg68
+S'-'
+sg70
 I28052
 sbasba(iplayer_info_parser
 Player
-p72
-(dp73
-g43
-S'2.63m'
 p74
-sg5
-VAndré Almeida Pinto
-p75
-sg6
-S'http://www.transfermarkt.co.uk/andre-pinto/profil/spieler/58923'
+(dp75
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/56005-1438696302.jpg?lm=1438696322'
 p76
-sg47
-S'26'
+sg45
+S'1.13m'
 p77
-sg11
-Nsg49
-S'Pinhas Zahavi'
+sg5
+VJosé Carlos Coentrão Marafona
 p78
-sg51
-S'6'
-sg53
-S'Defence - Centre Back'
+sg6
+S'http://www.transfermarkt.co.uk/marafona/profil/spieler/56005'
 p79
-sg55
-S'right'
+sg49
+S'\r\n                                         '
 p80
-sg57
-S'Portugal'
+sg11
+Nsg51
+g52
+sg53
+S'28'
 p81
+sg55
+S''
+sg57
+S'Goalkeeper'
+p82
 sg59
-(lp82
+S''
+sg61
+(lp83
 (iplayer_info_parser
 Transfer
-p83
-(dp84
-g63
-S'Jan 1, 2014'
-p85
-sg65
-I1075
-sg66
-S'Free transfer'
+p84
+(dp85
+g65
+S'Jan 25, 2016'
 p86
+sg67
+I1075
 sg68
-I265
-sba(iplayer_info_parser
-Transfer
+S'300k'
 p87
-(dp88
-g63
-S'Jul 1, 2012'
-p89
-sg65
-I265
-sg66
-S'Free transfer'
+sg70
+I2995
+sba(iplayer_info_parser
+Transfer
+p88
+(dp89
+g65
+S'Jul 2, 2015'
 p90
+sg67
+I2995
 sg68
-I720
-sba(iplayer_info_parser
-Transfer
+S'Free transfer'
 p91
-(dp92
-g63
-S'Jun 30, 2012'
-p93
-sg65
-I720
-sg66
-S'End of loan'
-p94
-sg68
-I4750
+sg70
+I979
 sba(iplayer_info_parser
 Transfer
-p95
-(dp96
-g63
-S'Jul 1, 2011'
-p97
-sg65
-I4750
-sg66
-S'Loan'
-p98
+p92
+(dp93
+g65
+S'Jul 1, 2013'
+p94
+sg67
+I979
 sg68
-I720
+S'Free transfer'
+p95
+sg70
+I3336
+sba(iplayer_info_parser
+Transfer
+p96
+(dp97
+g65
+S'Jul 1, 2012'
+p98
+sg67
+I3336
+sg68
+S'?'
+sg70
+I1301
 sba(iplayer_info_parser
 Transfer
 p99
 (dp100
-g63
-S'Jun 30, 2011'
+g65
+S'Jun 30, 2012'
 p101
-sg65
-I720
-sg66
+sg67
+I1301
+sg68
 S'End of loan'
 p102
-sg68
-I7378
+sg70
+I3336
 sba(iplayer_info_parser
 Transfer
 p103
 (dp104
-g63
-S'Jul 1, 2010'
+g65
+S'Jul 1, 2011'
 p105
-sg65
-I7378
-sg66
+sg67
+I3336
+sg68
 S'Loan'
 p106
-sg68
-I720
+sg70
+I1301
 sba(iplayer_info_parser
 Transfer
 p107
 (dp108
-g63
-S'Jun 30, 2010'
+g65
+S'Jul 1, 2010'
 p109
-sg65
-I720
-sg66
-S'End of loan'
+sg67
+I1301
+sg68
+S'?'
+sg70
+I4297
+sba(iplayer_info_parser
+Transfer
 p110
+(dp111
+g65
+S'Jul 1, 2005'
+p112
+sg67
+I4297
 sg68
-I1085
-sba(iplayer_info_parser
-Transfer
-p111
-(dp112
-g63
-S'Jul 1, 2009'
-p113
-sg65
-I1085
-sg66
-S'Loan'
-p114
-sg68
-I720
-sba(iplayer_info_parser
-Transfer
-p115
-(dp116
-g63
-S'Jun 30, 2009'
-p117
-sg65
-I720
-sg66
-S'End of loan'
-p118
-sg68
-I2423
-sba(iplayer_info_parser
-Transfer
-p119
-(dp120
-g63
-S'Jul 1, 2008'
-p121
-sg65
-I2423
-sg66
-S'Loan'
-p122
-sg68
-I9844
-sba(iplayer_info_parser
-Transfer
-p123
-(dp124
-g63
-S'Jul 1, 2006'
-p125
-sg65
-I9844
-sg66
 S'-'
-sg68
-I47962
+sg70
+I15594
 sbasba(iplayer_info_parser
 Player
-p126
-(dp127
+p113
+(dp114
 g43
-S'938k'
-p128
+S'http://akacdn.transfermarkt.de/images/portrait/header/58923-1442915229.jpg?lm=1442915241'
+p115
+sg45
+S'2.63m'
+p116
 sg5
-VRicardo José Araújo Ferreira
-p129
+VAndré Almeida Pinto
+p117
 sg6
-S'http://www.transfermarkt.co.uk/ricardo-ferreira/profil/spieler/151205'
-p130
-sg47
-S'23'
-p131
+S'http://www.transfermarkt.co.uk/andre-pinto/profil/spieler/58923'
+p118
+sg49
+S'26'
+p119
 sg11
-Nsg49
-g50
-sg51
-S'24'
-p132
+Nsg51
+S'Pinhas Zahavi'
+p120
 sg53
-S'Defence - Centre Back'
-p133
+S'6'
 sg55
-S'right'
-p134
+S'Defence - Centre Back'
+p121
 sg57
-S'Portugal'
-p135
+S'right'
+p122
 sg59
-(lp136
+S'Portugal'
+p123
+sg61
+(lp124
 (iplayer_info_parser
+Transfer
+p125
+(dp126
+g65
+S'Jan 1, 2014'
+p127
+sg67
+I1075
+sg68
+S'Free transfer'
+p128
+sg70
+I265
+sba(iplayer_info_parser
+Transfer
+p129
+(dp130
+g65
+S'Jul 1, 2012'
+p131
+sg67
+I265
+sg68
+S'Free transfer'
+p132
+sg70
+I720
+sba(iplayer_info_parser
+Transfer
+p133
+(dp134
+g65
+S'Jun 30, 2012'
+p135
+sg67
+I720
+sg68
+S'End of loan'
+p136
+sg70
+I4750
+sba(iplayer_info_parser
 Transfer
 p137
 (dp138
-g63
-S'Jul 2, 2015'
+g65
+S'Jul 1, 2011'
 p139
-sg65
-I1075
-sg66
-S'Free transfer'
-p140
-sg68
+sg67
 I4750
+sg68
+S'Loan'
+p140
+sg70
+I720
 sba(iplayer_info_parser
 Transfer
 p141
 (dp142
-g63
-S'Jun 30, 2015'
+g65
+S'Jun 30, 2011'
 p143
-sg65
-I4750
-sg66
+sg67
+I720
+sg68
 S'End of loan'
 p144
-sg68
-I2995
+sg70
+I7378
 sba(iplayer_info_parser
 Transfer
 p145
 (dp146
-g63
-S'Jul 22, 2014'
+g65
+S'Jul 1, 2010'
 p147
-sg65
-I2995
-sg66
+sg67
+I7378
+sg68
 S'Loan'
 p148
-sg68
-I4750
+sg70
+I720
 sba(iplayer_info_parser
 Transfer
 p149
 (dp150
-g63
-S'Jul 13, 2013'
+g65
+S'Jun 30, 2010'
 p151
-sg65
-I4750
-sg66
-S'?'
+sg67
+I720
 sg68
-I10958
-sba(iplayer_info_parser
-Transfer
-p152
-(dp153
-g63
-S'Jun 30, 2013'
-p154
-sg65
-I10958
-sg66
 S'End of loan'
-p155
-sg68
-I749
+p152
+sg70
+I1085
 sba(iplayer_info_parser
 Transfer
-p156
-(dp157
-g63
-S'Jul 13, 2012'
-p158
-sg65
-I749
-sg66
-S'Loan'
-p159
-sg68
-I10958
-sba(iplayer_info_parser
-Transfer
-p160
-(dp161
-g63
-S'Jul 5, 2011'
-p162
-sg65
-I10958
-sg66
-S'Free transfer'
-p163
-sg68
-I9844
-sba(iplayer_info_parser
-Transfer
-p164
-(dp165
-g63
+p153
+(dp154
+g65
 S'Jul 1, 2009'
-p166
-sg65
-I9844
-sg66
-S'-'
+p155
+sg67
+I1085
 sg68
+S'Loan'
+p156
+sg70
+I720
+sba(iplayer_info_parser
+Transfer
+p157
+(dp158
+g65
+S'Jun 30, 2009'
+p159
+sg67
+I720
+sg68
+S'End of loan'
+p160
+sg70
+I2423
+sba(iplayer_info_parser
+Transfer
+p161
+(dp162
+g65
+S'Jul 1, 2008'
+p163
+sg67
+I2423
+sg68
+S'Loan'
+p164
+sg70
+I9844
+sba(iplayer_info_parser
+Transfer
+p165
+(dp166
+g65
+S'Jul 1, 2006'
+p167
+sg67
+I9844
+sg68
+S'-'
+sg70
 I47962
 sbasba(iplayer_info_parser
 Player
-p167
-(dp168
+p168
+(dp169
 g43
-S'188k'
-p169
-sg5
-S'Arghus Soares Bordignon'
+S'http://akacdn.transfermarkt.de/images/portrait/header/142310-1442915277.jpg?lm=1442915289'
 p170
-sg6
-S'http://www.transfermarkt.co.uk/arghus/profil/spieler/190168'
+sg45
+S'1.88m'
 p171
-sg47
-S'28'
+sg5
+S''
+sg6
+S'http://www.transfermarkt.co.uk/willy-boly/profil/spieler/142310'
 p172
-sg11
-Nsg49
-VProeleven Gestão Desportiva Lda
+sg49
+S'1,95 m'
 p173
-sg51
-S'32'
-p174
+sg11
+Nsg51
+g52
 sg53
-S'Defence - Centre Back'
-p175
+S'5'
 sg55
-S'left'
-p176
+S'right'
+p174
 sg57
-S'Brazil'
-p177
+S''
 sg59
-(lp178
+S''
+sg61
+(lp175
 (iplayer_info_parser
+Transfer
+p176
+(dp177
+g65
+S'Jul 1, 2015'
+p178
+sg67
+I1075
+sg68
+S'-'
+sg70
+I10789
+sba(iplayer_info_parser
 Transfer
 p179
 (dp180
-g63
-S'Aug 28, 2015'
+g65
+S'Oct 1, 2014'
 p181
-sg65
-I1075
-sg66
-S'150k'
-p182
+sg67
+I10789
 sg68
-I790
+S'-'
+sg70
+I1075
 sba(iplayer_info_parser
 Transfer
-p183
-(dp184
-g63
-S'Jul 1, 2011'
-p185
-sg65
-I790
-sg66
-S'?'
+p182
+(dp183
+g65
+S'Sep 1, 2014'
+p184
+sg67
+I1075
 sg68
-I27819
+S'Free transfer'
+p185
+sg70
+I290
 sba(iplayer_info_parser
 Transfer
 p186
 (dp187
-g63
-S'Jul 1, 2009'
+g65
+S'Feb 1, 2011'
 p188
-sg65
-I27819
-sg66
-S'?'
+sg67
+I290
 sg68
-I27288
+S'-'
+sg70
+I10820
 sba(iplayer_info_parser
 Transfer
 p189
 (dp190
-g63
-S'Jul 1, 2008'
+g65
+S'Jul 1, 2009'
 p191
-sg65
-I27288
-sg66
-S'?'
+sg67
+I10820
 sg68
-I10492
+S'-'
+sg70
+I7817
 sba(iplayer_info_parser
 Transfer
 p192
 (dp193
-g63
-S'Jun 30, 2008'
-p194
-sg65
-I10492
-sg66
-S'End of loan'
-p195
-sg68
-I12000
-sba(iplayer_info_parser
-Transfer
-p196
-(dp197
-g63
-S'Jul 1, 2007'
-p198
-sg65
-I12000
-sg66
-S'Loan'
-p199
-sg68
-I10492
-sbasba(iplayer_info_parser
-Player
-p200
-(dp201
-g43
-S'1.13m'
-p202
-sg5
-S'Djavan da Silva Ferreira'
-p203
-sg6
-S'http://www.transfermarkt.co.uk/djavan/profil/spieler/291981'
-p204
-sg47
-S'28'
-p205
-sg11
-Nsg49
-S'International Foot'
-p206
-sg51
-S'16'
-p207
-sg53
-S'Defence - Left-Back'
-p208
-sg55
-S'left'
-p209
-sg57
-S'Brazil'
-p210
-sg59
-(lp211
-(iplayer_info_parser
-Transfer
-p212
-(dp213
-g63
-S'Aug 2, 2014'
-p214
-sg65
-I1075
-sg66
-S'750k'
-p215
-sg68
-I294
-sba(iplayer_info_parser
-Transfer
-p216
-(dp217
-g63
-S'Jul 1, 2014'
-p218
-sg65
-I294
-sg66
-S'1.13m'
-p219
-sg68
-I3266
-sbasba(iplayer_info_parser
-Player
-p220
-(dp221
-g43
-S'2.63m'
-p222
-sg5
-S'Wanderson Sousa Carneiro'
-p223
-sg6
-S'http://www.transfermarkt.co.uk/baiano/profil/spieler/77752'
-p224
-sg47
-S'29'
-p225
-sg11
-Nsg49
-g50
-sg51
-S'15'
-p226
-sg53
-S'Defence - Right-Back'
-p227
-sg55
-S'right'
-p228
-sg57
-S'Brazil'
-p229
-sg59
-(lp230
-(iplayer_info_parser
-Transfer
-p231
-(dp232
-g63
-S'Jul 1, 2011'
-p233
-sg65
-I1075
-sg66
-S'Free transfer'
-p234
-sg68
-I2995
-sba(iplayer_info_parser
-Transfer
-p235
-(dp236
-g63
-S'Jul 1, 2009'
-p237
-sg65
-I2995
-sg66
-S'Free transfer'
-p238
-sg68
-I2457
-sba(iplayer_info_parser
-Transfer
-p239
-(dp240
-g63
+g65
 S'Jul 1, 2008'
-p241
-sg65
-I2457
-sg66
-S'?'
+p194
+sg67
+I7817
 sg68
-I17568
+S'-'
+sg70
+I40466
+sba(iplayer_info_parser
+Transfer
+p195
+(dp196
+g65
+S'Jul 1, 2007'
+p197
+sg67
+I40466
+sg68
+S'Free transfer'
+p198
+sg70
+I43659
+sba(iplayer_info_parser
+Transfer
+p199
+(dp200
+g65
+S'Jul 1, 2005'
+p201
+sg67
+I43659
+sg68
+S'-'
+sg70
+I43658
 sbasba(iplayer_info_parser
 Player
-p242
-(dp243
+p202
+(dp203
 g43
-S'1.50m'
-p244
+S'http://akacdn.transfermarkt.de/images/portrait/header/151205-1442915444.jpg?lm=1442915456'
+p204
+sg45
+S'938k'
+p205
 sg5
-S'Filipe Augusto Carvalho Souza'
-p245
+VRicardo José Araújo Ferreira
+p206
 sg6
-S'http://www.transfermarkt.co.uk/filipe-augusto/profil/spieler/212899'
-p246
-sg47
-S'22'
-p247
+S'http://www.transfermarkt.co.uk/ricardo-ferreira/profil/spieler/151205'
+p207
+sg49
+S'23'
+p208
 sg11
-Nsg49
-S'DM Football Advice International'
-p248
-sg51
-S'21'
-p249
+Nsg51
+g52
 sg53
-S'Midfield - Defensive Midfield'
-p250
+S'24'
+p209
 sg55
-S'left'
-p251
+S'Defence - Centre Back'
+p210
 sg57
-S'Brazil'
-p252
+S'right'
+p211
 sg59
-(lp253
+S'Portugal'
+p212
+sg61
+(lp213
 (iplayer_info_parser
 Transfer
-p254
-(dp255
-g63
-S'Jun 30, 2016'
-p256
-sg65
-I2425
-sg66
-S'End of loan'
-p257
-sg68
+p214
+(dp215
+g65
+S'Jul 2, 2015'
+p216
+sg67
 I1075
+sg68
+S'Free transfer'
+p217
+sg70
+I4750
 sba(iplayer_info_parser
 Transfer
-p258
-(dp259
-g63
-S'Aug 31, 2015'
-p260
-sg65
-I1075
-sg66
-S'Loan'
-p261
-sg68
-I2425
-sba(iplayer_info_parser
-Transfer
-p262
-(dp263
-g63
+p218
+(dp219
+g65
 S'Jun 30, 2015'
-p264
-sg65
-I2425
-sg66
-S'End of loan'
-p265
+p220
+sg67
+I4750
 sg68
-I1049
+S'End of loan'
+p221
+sg70
+I2995
 sba(iplayer_info_parser
 Transfer
-p266
-(dp267
-g63
-S'Sep 1, 2014'
-p268
-sg65
-I1049
-sg66
-S'Loan'
-p269
+p222
+(dp223
+g65
+S'Jul 22, 2014'
+p224
+sg67
+I2995
 sg68
-I2425
+S'Loan'
+p225
+sg70
+I4750
+sba(iplayer_info_parser
+Transfer
+p226
+(dp227
+g65
+S'Jul 13, 2013'
+p228
+sg67
+I4750
+sg68
+S'?'
+sg70
+I10958
+sba(iplayer_info_parser
+Transfer
+p229
+(dp230
+g65
+S'Jun 30, 2013'
+p231
+sg67
+I10958
+sg68
+S'End of loan'
+p232
+sg70
+I749
+sba(iplayer_info_parser
+Transfer
+p233
+(dp234
+g65
+S'Jul 13, 2012'
+p235
+sg67
+I749
+sg68
+S'Loan'
+p236
+sg70
+I10958
+sba(iplayer_info_parser
+Transfer
+p237
+(dp238
+g65
+S'Jul 5, 2011'
+p239
+sg67
+I10958
+sg68
+S'Free transfer'
+p240
+sg70
+I9844
+sba(iplayer_info_parser
+Transfer
+p241
+(dp242
+g65
+S'Jul 1, 2009'
+p243
+sg67
+I9844
+sg68
+S'-'
+sg70
+I47962
+sbasba(iplayer_info_parser
+Player
+p244
+(dp245
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/190168-1442915367.jpg?lm=1442915380'
+p246
+sg45
+S'188k'
+p247
+sg5
+S'Arghus Soares Bordignon'
+p248
+sg6
+S'http://www.transfermarkt.co.uk/arghus/profil/spieler/190168'
+p249
+sg49
+S'28'
+p250
+sg11
+Nsg51
+VProeleven Gestão Desportiva Lda
+p251
+sg53
+S'32'
+p252
+sg55
+S'Defence - Centre Back'
+p253
+sg57
+S'left'
+p254
+sg59
+S'Brazil'
+p255
+sg61
+(lp256
+(iplayer_info_parser
+Transfer
+p257
+(dp258
+g65
+S'Aug 28, 2015'
+p259
+sg67
+I1075
+sg68
+S'150k'
+p260
+sg70
+I790
+sba(iplayer_info_parser
+Transfer
+p261
+(dp262
+g65
+S'Jul 1, 2011'
+p263
+sg67
+I790
+sg68
+S'?'
+sg70
+I27819
+sba(iplayer_info_parser
+Transfer
+p264
+(dp265
+g65
+S'Jul 1, 2009'
+p266
+sg67
+I27819
+sg68
+S'?'
+sg70
+I27288
+sba(iplayer_info_parser
+Transfer
+p267
+(dp268
+g65
+S'Jul 1, 2008'
+p269
+sg67
+I27288
+sg68
+S'?'
+sg70
+I10492
 sba(iplayer_info_parser
 Transfer
 p270
 (dp271
-g63
-S'Jul 1, 2012'
+g65
+S'Jun 30, 2008'
 p272
-sg65
-I2425
-sg66
-S'1.65m'
-p273
+sg67
+I10492
 sg68
-I10010
+S'End of loan'
+p273
+sg70
+I12000
 sba(iplayer_info_parser
 Transfer
 p274
 (dp275
-g63
-S'Jan 1, 2012'
+g65
+S'Jul 1, 2007'
 p276
-sg65
-I10010
-sg66
-S'-'
+sg67
+I12000
 sg68
-I17817
+S'Loan'
+p277
+sg70
+I10492
 sbasba(iplayer_info_parser
 Player
-p277
-(dp278
+p278
+(dp279
 g43
-S'1.13m'
-p279
-sg5
-S'Mauro Silva Sousa'
+S'http://akacdn.transfermarkt.de/images/portrait/header/248903-1442915588.jpg?lm=1442915604'
 p280
-sg6
-S'http://www.transfermarkt.co.uk/mauro/profil/spieler/182468'
+sg45
+S'1.50m'
 p281
-sg47
-S'25'
+sg5
+S'Marcelo Augusto Ferreira Teixeira'
 p282
-sg11
-Nsg49
-g50
-sg51
-S'63'
+sg6
+S'http://www.transfermarkt.co.uk/marcelo-goiano/profil/spieler/248903'
 p283
-sg53
-S'Midfield - Defensive Midfield'
+sg49
+S'28'
 p284
-sg55
-S'right'
+sg11
+Nsg51
+g52
+sg53
+S'87'
 p285
-sg57
-S'Brazil'
+sg55
+S'Defence - Left-Back'
 p286
+sg57
+S'right'
+p287
 sg59
-(lp287
+S'Brazil'
+p288
+sg61
+(lp289
+sba(iplayer_info_parser
+Player
+p290
+(dp291
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/291981-1442915491.jpg?lm=1442915508'
+p292
+sg45
+S'1.13m'
+p293
+sg5
+S'Djavan da Silva Ferreira'
+p294
+sg6
+S'http://www.transfermarkt.co.uk/djavan/profil/spieler/291981'
+p295
+sg49
+S'28'
+p296
+sg11
+Nsg51
+S'International Foot'
+p297
+sg53
+S'16'
+p298
+sg55
+S'Defence - Left-Back'
+p299
+sg57
+S'left'
+p300
+sg59
+S'Brazil'
+p301
+sg61
+(lp302
 (iplayer_info_parser
 Transfer
-p288
-(dp289
-g63
-S'Jul 1, 2013'
-p290
-sg65
-I1075
-sg66
-S'-'
-sg68
-I10789
-sba(iplayer_info_parser
-Transfer
-p291
-(dp292
-g63
-S'Jul 1, 2012'
-p293
-sg65
-I10789
-sg66
-S'?'
-sg68
-I25243
-sba(iplayer_info_parser
-Transfer
-p294
-(dp295
-g63
-S'Jun 30, 2012'
-p296
-sg65
-I25243
-sg66
-S'End of loan'
-p297
-sg68
-I2424
-sba(iplayer_info_parser
-Transfer
-p298
-(dp299
-g63
-S'Jul 1, 2011'
-p300
-sg65
-I2424
-sg66
-S'Loan'
-p301
-sg68
-I25243
-sba(iplayer_info_parser
-Transfer
-p302
-(dp303
-g63
-S'May 1, 2011'
-p304
-sg65
-I25243
-sg66
-S'End of loan'
+p303
+(dp304
+g65
+S'Aug 2, 2014'
 p305
+sg67
+I1075
 sg68
-I15172
+S'750k'
+p306
+sg70
+I294
 sba(iplayer_info_parser
 Transfer
-p306
-(dp307
-g63
-S'Jan 1, 2011'
-p308
-sg65
-I15172
-sg66
-S'Loan'
+p307
+(dp308
+g65
+S'Jul 1, 2014'
 p309
+sg67
+I294
 sg68
-I25243
+S'1.13m'
+p310
+sg70
+I3266
 sbasba(iplayer_info_parser
 Player
-p310
-(dp311
+p311
+(dp312
 g43
-S'1.69m'
-p312
-sg5
-VLuíz Carlos Martins Moreira
+S'http://akacdn.transfermarkt.de/bilder/spielerfotos/s_107667_353_2010_1.jpg?lm=0'
 p313
-sg6
-S'http://www.transfermarkt.co.uk/luiz-carlos/profil/spieler/129670'
+sg45
+S'450k'
 p314
-sg47
-S'31'
+sg5
+S'Stian Lunder Ringstad'
 p315
-sg11
-Nsg49
-S'Footconect Fma'
+sg6
+S'http://www.transfermarkt.co.uk/stian-ringstad/profil/spieler/107667'
 p316
-sg51
-S'8'
-sg53
-S'Midfield - Central Midfield'
+sg49
+S'1,82 m'
 p317
-sg55
-S'right'
+sg11
+Nsg51
+g52
+sg53
+S'25'
 p318
-sg57
-S'Brazil'
+sg55
+S'left'
 p319
+sg57
+S''
 sg59
+S''
+sg61
 (lp320
 (iplayer_info_parser
 Transfer
 p321
 (dp322
-g63
-S'Jul 1, 2013'
+g65
+S'Jan 1, 2016'
 p323
-sg65
+sg67
 I1075
-sg66
+sg68
 S'Free transfer'
 p324
-sg68
-I2995
+sg70
+I353
 sba(iplayer_info_parser
 Transfer
 p325
 (dp326
-g63
-S'Jul 1, 2011'
+g65
+S'Jan 1, 2009'
 p327
-sg65
-I2995
-sg66
-S'?'
+sg67
+I353
 sg68
-I2421
-sba(iplayer_info_parser
-Transfer
-p328
-(dp329
-g63
-S'Jul 1, 2009'
-p330
-sg65
-I2421
-sg66
 S'?'
-sg68
-I21849
+sg70
+I6493
 sbasba(iplayer_info_parser
 Player
-p331
-(dp332
+p328
+(dp329
 g43
-S'750k'
-p333
+S'http://akacdn.transfermarkt.de/images/portrait/header/77752-1442915542.jpg?lm=1442915554'
+p330
+sg45
+S'2.63m'
+p331
 sg5
-VAarón Ñíguez Esclapez
-p334
+S'Wanderson Sousa Carneiro'
+p332
 sg6
-S'http://www.transfermarkt.co.uk/aaron-niguez/profil/spieler/57943'
-p335
-sg47
-S'27'
-p336
+S'http://www.transfermarkt.co.uk/baiano/profil/spieler/77752'
+p333
+sg49
+S'29'
+p334
 sg11
-Nsg49
-S'InterStarDeporte'
-p337
-sg51
-S'14'
-p338
+Nsg51
+g52
 sg53
-S'Midfield - Left Wing'
-p339
+S'15'
+p335
 sg55
-S'right'
-p340
+S'Defence - Right-Back'
+p336
 sg57
-S'Spain'
-p341
+S'right'
+p337
 sg59
-(lp342
+S'Brazil'
+p338
+sg61
+(lp339
 (iplayer_info_parser
 Transfer
-p343
-(dp344
-g63
-S'Aug 31, 2015'
-p345
-sg65
+p340
+(dp341
+g65
+S'Jul 1, 2011'
+p342
+sg67
 I1075
-sg66
+sg68
 S'Free transfer'
+p343
+sg70
+I2995
+sba(iplayer_info_parser
+Transfer
+p344
+(dp345
+g65
+S'Jul 1, 2009'
 p346
+sg67
+I2995
 sg68
-I1531
-sba(iplayer_info_parser
-Transfer
-p347
-(dp348
-g63
-S'Jan 7, 2013'
-p349
-sg65
-I1531
-sg66
 S'Free transfer'
-p350
-sg68
-I3302
+p347
+sg70
+I2457
 sba(iplayer_info_parser
 Transfer
+p348
+(dp349
+g65
+S'Jul 1, 2008'
+p350
+sg67
+I2457
+sg68
+S'?'
+sg70
+I17568
+sbasba(iplayer_info_parser
+Player
 p351
 (dp352
-g63
-S'Jul 12, 2011'
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/151470-1442915753.jpg?lm=1442915764'
 p353
-sg65
-I3302
-sg66
-S'Free transfer'
+sg45
+S'1.88m'
 p354
-sg68
-I1049
-sba(iplayer_info_parser
-Transfer
+sg5
+S''
+sg6
+S'http://www.transfermarkt.co.uk/nikola-vukcevic/profil/spieler/151470'
 p355
-(dp356
-g63
-S'Jun 30, 2011'
+sg49
+S'1,84 m'
+p356
+sg11
+Nsg51
+g52
+sg53
+S'35'
 p357
-sg65
-I1049
-sg66
-S'End of loan'
+sg55
+S'right'
 p358
-sg68
-I2867
-sba(iplayer_info_parser
+sg57
+S''
+sg59
+S''
+sg61
+(lp359
+(iplayer_info_parser
 Transfer
-p359
-(dp360
-g63
-S'Aug 16, 2010'
-p361
-sg65
-I2867
-sg66
-S'Loan'
+p360
+(dp361
+g65
+S'Jul 1, 2015'
 p362
+sg67
+I1075
 sg68
-I1049
+S'-'
+sg70
+I10789
 sba(iplayer_info_parser
 Transfer
 p363
 (dp364
-g63
-S'Jun 30, 2010'
+g65
+S'Sep 1, 2013'
 p365
-sg65
-I1049
-sg66
-S'End of loan'
-p366
+sg67
+I10789
 sg68
-I940
+S'94k'
+p366
+sg70
+I4391
 sba(iplayer_info_parser
 Transfer
 p367
 (dp368
-g63
-S'Aug 30, 2009'
+g65
+S'Jul 1, 2010'
 p369
-sg65
-I940
-sg66
-S'Loan'
+sg67
+I4391
+sg68
+S'-'
+sg70
+I27908
+sbasba(iplayer_info_parser
+Player
 p370
-sg68
-I1049
-sba(iplayer_info_parser
-Transfer
-p371
-(dp372
-g63
-S'Jun 30, 2009'
+(dp371
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/212899-1442915639.jpg?lm=1442915652'
+p372
+sg45
+S'1.50m'
 p373
-sg65
-I1049
-sg66
-S'End of loan'
+sg5
+S'Filipe Augusto Carvalho Souza'
 p374
-sg68
-I124
-sba(iplayer_info_parser
-Transfer
+sg6
+S'http://www.transfermarkt.co.uk/filipe-augusto/profil/spieler/212899'
 p375
-(dp376
-g63
-S'Aug 15, 2008'
+sg49
+S'22'
+p376
+sg11
+Nsg51
+S'DM Football Advice International'
 p377
-sg65
-I124
-sg66
-S'Loan'
+sg53
+S'21'
 p378
-sg68
-I1049
-sba(iplayer_info_parser
-Transfer
+sg55
+S'Midfield - Defensive Midfield'
 p379
-(dp380
-g63
-S'Jun 30, 2008'
+sg57
+S'left'
+p380
+sg59
+S'Brazil'
 p381
-sg65
-I1049
-sg66
-S'End of loan'
-p382
-sg68
-I47
-sba(iplayer_info_parser
+sg61
+(lp382
+(iplayer_info_parser
 Transfer
 p383
 (dp384
-g63
-S'Jan 11, 2008'
+g65
+S'Jun 30, 2016'
 p385
-sg65
-I47
-sg66
-S'Loan'
-p386
+sg67
+I2425
 sg68
-I6182
+S'End of loan'
+p386
+sg70
+I1075
 sba(iplayer_info_parser
 Transfer
 p387
 (dp388
-g63
-S'Jan 10, 2008'
+g65
+S'Aug 31, 2015'
 p389
-sg65
-I6182
-sg66
-S'End of loan'
-p390
+sg67
+I1075
 sg68
-I134
+S'Loan'
+p390
+sg70
+I2425
 sba(iplayer_info_parser
 Transfer
 p391
 (dp392
-g63
-S'Jul 1, 2007'
+g65
+S'Jun 30, 2015'
 p393
-sg65
-I134
-sg66
-S'Loan'
-p394
+sg67
+I2425
 sg68
-I6182
+S'End of loan'
+p394
+sg70
+I1049
 sba(iplayer_info_parser
 Transfer
 p395
 (dp396
-g63
-S'Jul 1, 2006'
+g65
+S'Sep 1, 2014'
 p397
-sg65
-I6182
-sg66
-S'-'
+sg67
+I1049
 sg68
-I10200
+S'Loan'
+p398
+sg70
+I2425
 sba(iplayer_info_parser
 Transfer
-p398
-(dp399
-g63
-S'Jul 1, 2005'
-p400
-sg65
-I10200
-sg66
-S'-'
+p399
+(dp400
+g65
+S'Jul 1, 2012'
+p401
+sg67
+I2425
 sg68
-I16200
+S'1.65m'
+p402
+sg70
+I10010
+sba(iplayer_info_parser
+Transfer
+p403
+(dp404
+g65
+S'Jan 1, 2012'
+p405
+sg67
+I10010
+sg68
+S'-'
+sg70
+I17817
 sbasba(iplayer_info_parser
 Player
-p401
-(dp402
-g43
-S'3.75m'
-p403
-sg5
-VJosué Filipe Soares Pesqueira
-p404
-sg6
-S'http://www.transfermarkt.co.uk/josue/profil/spieler/72772'
-p405
-sg47
-S'25'
 p406
-sg11
-Nsg49
-VProeleven Gestão Desportiva Lda
-p407
-sg51
-S'27'
+(dp407
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/182468-1442915693.jpg?lm=1442915709'
 p408
-sg53
-S'Midfield - Right Wing'
+sg45
+S'1.13m'
 p409
-sg55
-S'left'
+sg5
+S'Mauro Silva Sousa'
 p410
-sg57
-S'Portugal'
+sg6
+S'http://www.transfermarkt.co.uk/mauro/profil/spieler/182468'
 p411
+sg49
+S'25'
+p412
+sg11
+Nsg51
+g52
+sg53
+S'63'
+p413
+sg55
+S'Midfield - Defensive Midfield'
+p414
+sg57
+S'right'
+p415
 sg59
-(lp412
+S'Brazil'
+p416
+sg61
+(lp417
 (iplayer_info_parser
 Transfer
-p413
-(dp414
-g63
-S'Jun 30, 2016'
-p415
-sg65
-I720
-sg66
-S'End of loan'
-p416
-sg68
-I1075
-sba(iplayer_info_parser
-Transfer
-p417
-(dp418
-g63
-S'Jan 26, 2016'
-p419
-sg65
-I1075
-sg66
-S'Loan'
+p418
+(dp419
+g65
+S'Jul 1, 2013'
 p420
+sg67
+I1075
 sg68
-I720
+S'-'
+sg70
+I10789
 sba(iplayer_info_parser
 Transfer
 p421
 (dp422
-g63
-S'Jan 20, 2016'
+g65
+S'Jul 1, 2012'
 p423
-sg65
-I720
-sg66
-S'End of loan'
+sg67
+I10789
+sg68
+S'?'
+sg70
+I25243
+sba(iplayer_info_parser
+Transfer
 p424
+(dp425
+g65
+S'Jun 30, 2012'
+p426
+sg67
+I25243
 sg68
-I20
-sba(iplayer_info_parser
-Transfer
-p425
-(dp426
-g63
-S'Jul 13, 2015'
+S'End of loan'
 p427
-sg65
-I20
-sg66
-S'Loan fee:'
+sg70
+I2424
+sba(iplayer_info_parser
+Transfer
 p428
-sg68
-I720
-sba(iplayer_info_parser
-Transfer
-p429
-(dp430
-g63
-S'Jun 30, 2015'
-p431
-sg65
-I720
-sg66
-S'End of loan'
-p432
-sg68
-I20
-sba(iplayer_info_parser
-Transfer
-p433
-(dp434
-g63
-S'Aug 11, 2014'
-p435
-sg65
-I20
-sg66
-S'Loan fee:'
-p436
-sg68
-I720
-sba(iplayer_info_parser
-Transfer
-p437
-(dp438
-g63
-S'Jul 1, 2013'
-p439
-sg65
-I720
-sg66
-S'375k'
-p440
-sg68
-I2995
-sba(iplayer_info_parser
-Transfer
-p441
-(dp442
-g63
+(dp429
+g65
 S'Jul 1, 2011'
-p443
-sg65
-I2995
-sg66
-S'Free transfer'
-p444
+p430
+sg67
+I2424
 sg68
-I720
+S'Loan'
+p431
+sg70
+I25243
 sba(iplayer_info_parser
 Transfer
-p445
-(dp446
-g63
-S'Jun 30, 2011'
-p447
-sg65
-I720
-sg66
-S'End of loan'
-p448
+p432
+(dp433
+g65
+S'May 1, 2011'
+p434
+sg67
+I25243
 sg68
-I1426
+S'End of loan'
+p435
+sg70
+I15172
 sba(iplayer_info_parser
+Transfer
+p436
+(dp437
+g65
+S'Jan 1, 2011'
+p438
+sg67
+I15172
+sg68
+S'Loan'
+p439
+sg70
+I25243
+sbasba(iplayer_info_parser
+Player
+p440
+(dp441
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/261459-1442915796.jpg?lm=1442915809'
+p442
+sg45
+S'375k'
+p443
+sg5
+S'Alef dos Santos Saldanha'
+p444
+sg6
+S'http://www.transfermarkt.co.uk/alef/profil/spieler/261459'
+p445
+sg49
+S'\r\n                                         '
+p446
+sg11
+Nsg51
+g52
+sg53
+S'4'
+sg55
+S''
+sg57
+S'Midfield - Defensive Midfield'
+p447
+sg59
+S''
+sg61
+(lp448
+(iplayer_info_parser
 Transfer
 p449
 (dp450
-g63
-S'Jul 1, 2010'
+g65
+S'Jul 8, 2015'
 p451
-sg65
-I1426
-sg66
-S'Loan'
-p452
+sg67
+I1075
 sg68
-I720
+S'563k'
+p452
+sg70
+I1134
 sba(iplayer_info_parser
 Transfer
 p453
 (dp454
-g63
-S'Jun 30, 2010'
+g65
+S'Jun 30, 2015'
 p455
-sg65
-I720
-sg66
+sg67
+I1134
+sg68
 S'End of loan'
 p456
-sg68
-I3327
+sg70
+I8524
 sba(iplayer_info_parser
 Transfer
 p457
 (dp458
-g63
-S'Jan 1, 2010'
+g65
+S'Aug 22, 2014'
 p459
-sg65
-I3327
-sg66
+sg67
+I8524
+sg68
 S'Loan'
 p460
-sg68
-I720
+sg70
+I1134
 sba(iplayer_info_parser
 Transfer
 p461
 (dp462
-g63
-S'Oct 1, 2009'
+g65
+S'Jan 1, 2013'
 p463
-sg65
-I720
-sg66
-S'End of loan'
-p464
+sg67
+I1134
 sg68
-I10140
-sba(iplayer_info_parser
-Transfer
-p465
-(dp466
-g63
-S'Jul 2, 2009'
-p467
-sg65
-I10140
-sg66
-S'Loan'
-p468
-sg68
-I720
-sba(iplayer_info_parser
-Transfer
-p469
-(dp470
-g63
-S'Jul 1, 2009'
-p471
-sg65
-I720
-sg66
 S'-'
-sg68
-I9844
-sba(iplayer_info_parser
-Transfer
+sg70
+I17656
+sbasba(iplayer_info_parser
+Player
+p464
+(dp465
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/129670-1442915841.jpg?lm=1442915851'
+p466
+sg45
+S'1.69m'
+p467
+sg5
+VLuíz Carlos Martins Moreira
+p468
+sg6
+S'http://www.transfermarkt.co.uk/luiz-carlos/profil/spieler/129670'
+p469
+sg49
+S'31'
+p470
+sg11
+Nsg51
+S'Footconect Fma'
+p471
+sg53
+S'8'
+sg55
+S'Midfield - Central Midfield'
 p472
-(dp473
-g63
-S'Jun 30, 2008'
+sg57
+S'right'
+p473
+sg59
+S'Brazil'
 p474
-sg65
-I9844
-sg66
-S'End of loan'
-p475
-sg68
-I48010
-sba(iplayer_info_parser
+sg61
+(lp475
+(iplayer_info_parser
 Transfer
 p476
 (dp477
-g63
-S'Aug 1, 2007'
+g65
+S'Jul 1, 2013'
 p478
-sg65
-I48010
-sg66
-S'Loan'
-p479
+sg67
+I1075
 sg68
-I9844
+S'Free transfer'
+p479
+sg70
+I2995
 sba(iplayer_info_parser
 Transfer
 p480
 (dp481
-g63
-S'Jul 1, 2007'
+g65
+S'Jul 1, 2011'
 p482
-sg65
-I9844
-sg66
-S'-'
+sg67
+I2995
 sg68
-I47962
-sbasba(iplayer_info_parser
-Player
+S'?'
+sg70
+I2421
+sba(iplayer_info_parser
+Transfer
 p483
 (dp484
-g43
-S'1.88m'
+g65
+S'Jul 1, 2009'
 p485
-sg5
-S'Pedro Miguel Martins Santos'
+sg67
+I2421
+sg68
+S'?'
+sg70
+I21849
+sbasba(iplayer_info_parser
+Player
 p486
-sg6
-S'http://www.transfermarkt.co.uk/pedro-santos/profil/spieler/131163'
-p487
-sg47
-S'28'
+(dp487
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/238055-1464946705.jpg?lm=1464946723'
 p488
-sg11
-Nsg49
-VProeleven Gestão Desportiva Lda
+sg45
+S'8.25m'
 p489
-sg51
-S'23'
+sg5
+S'Rafael Alexandre Fernandes Ferreira Silva'
 p490
-sg53
-S'Midfield - Right Wing'
+sg6
+S'http://www.transfermarkt.co.uk/rafa-silva/profil/spieler/238055'
 p491
-sg55
-S'left'
+sg49
+S'\r\n                                         '
 p492
-sg57
-S'Portugal'
+sg11
+Nsg51
+g52
+sg53
+S'18'
 p493
+sg55
+S''
+sg57
+S'Midfield - Left Wing'
+p494
 sg59
-(lp494
+S''
+sg61
+(lp495
 (iplayer_info_parser
 Transfer
-p495
-(dp496
-g63
-S'Jun 30, 2014'
-p497
-sg65
-I1075
-sg66
-S'End of loan'
+p496
+(dp497
+g65
+S'Jul 8, 2013'
 p498
-sg68
-I2425
-sba(iplayer_info_parser
-Transfer
-p499
-(dp500
-g63
-S'Jan 2, 2014'
-p501
-sg65
-I2425
-sg66
-S'Loan'
-p502
-sg68
+sg67
 I1075
+sg68
+S'206k'
+p499
+sg70
+I3349
 sba(iplayer_info_parser
 Transfer
+p500
+(dp501
+g65
+S'Jul 1, 2012'
+p502
+sg67
+I3349
+sg68
+S'-'
+sg70
+I15802
+sbasba(iplayer_info_parser
+Player
 p503
 (dp504
-g63
-S'Jan 1, 2014'
-p505
-sg65
-I1075
-sg66
-S'End of loan'
-p506
-sg68
-I13499
-sba(iplayer_info_parser
-Transfer
-p507
-(dp508
-g63
-S'Sep 4, 2013'
-p509
-sg65
-I13499
-sg66
-S'Loan'
-p510
-sg68
-I1075
-sba(iplayer_info_parser
-Transfer
-p511
-(dp512
-g63
-S'Jul 1, 2013'
-p513
-sg65
-I1075
-sg66
-S'Free transfer'
-p514
-sg68
-I1085
-sba(iplayer_info_parser
-Transfer
-p515
-(dp516
-g63
-S'Jul 1, 2012'
-p517
-sg65
-I1085
-sg66
-S'Free transfer'
-p518
-sg68
-I3345
-sba(iplayer_info_parser
-Transfer
-p519
-(dp520
-g63
-S'Jul 1, 2010'
-p521
-sg65
-I3345
-sg66
-S'?'
-sg68
-I3268
-sba(iplayer_info_parser
-Transfer
-p522
-(dp523
-g63
-S'Jul 1, 2007'
-p524
-sg65
-I3268
-sg66
-S'-'
-sg68
-I20205
-sbasba(iplayer_info_parser
-Player
-p525
-(dp526
 g43
-S'375k'
-p527
+S'http://akacdn.transfermarkt.de/images/portrait/header/57943-1442915881.jpg?lm=1442915896'
+p505
+sg45
+S'750k'
+p506
 sg5
-VAlan Osório da Costa Silva
-p528
+VAarón Ñíguez Esclapez
+p507
 sg6
-S'http://www.transfermarkt.co.uk/alan/profil/spieler/14127'
-p529
-sg47
-S'36'
-p530
+S'http://www.transfermarkt.co.uk/aaron-niguez/profil/spieler/57943'
+p508
+sg49
+S'27'
+p509
 sg11
-Nsg49
-S'CONACTA INC'
-p531
-sg51
-S'30'
-p532
+Nsg51
+S'InterStarDeporte'
+p510
 sg53
-S'Midfield - Right Wing'
-p533
+S'14'
+p511
 sg55
-S'right'
-p534
+S'Midfield - Left Wing'
+p512
 sg57
-S'Brazil'
-p535
+S'right'
+p513
 sg59
-(lp536
+S'Spain'
+p514
+sg61
+(lp515
 (iplayer_info_parser
 Transfer
-p537
-(dp538
-g63
-S'Jul 1, 2008'
-p539
-sg65
+p516
+(dp517
+g65
+S'Aug 31, 2015'
+p518
+sg67
 I1075
-sg66
+sg68
 S'Free transfer'
-p540
-sg68
-I720
+p519
+sg70
+I1531
 sba(iplayer_info_parser
 Transfer
-p541
-(dp542
-g63
-S'Jun 30, 2008'
-p543
-sg65
-I720
-sg66
+p520
+(dp521
+g65
+S'Jan 7, 2013'
+p522
+sg67
+I1531
+sg68
+S'Free transfer'
+p523
+sg70
+I3302
+sba(iplayer_info_parser
+Transfer
+p524
+(dp525
+g65
+S'Jul 12, 2011'
+p526
+sg67
+I3302
+sg68
+S'Free transfer'
+p527
+sg70
+I1049
+sba(iplayer_info_parser
+Transfer
+p528
+(dp529
+g65
+S'Jun 30, 2011'
+p530
+sg67
+I1049
+sg68
 S'End of loan'
-p544
-sg68
-I2420
+p531
+sg70
+I2867
 sba(iplayer_info_parser
 Transfer
-p545
-(dp546
-g63
-S'Jul 1, 2007'
-p547
-sg65
-I2420
-sg66
+p532
+(dp533
+g65
+S'Aug 16, 2010'
+p534
+sg67
+I2867
+sg68
 S'Loan'
+p535
+sg70
+I1049
+sba(iplayer_info_parser
+Transfer
+p536
+(dp537
+g65
+S'Jun 30, 2010'
+p538
+sg67
+I1049
+sg68
+S'End of loan'
+p539
+sg70
+I940
+sba(iplayer_info_parser
+Transfer
+p540
+(dp541
+g65
+S'Aug 30, 2009'
+p542
+sg67
+I940
+sg68
+S'Loan'
+p543
+sg70
+I1049
+sba(iplayer_info_parser
+Transfer
+p544
+(dp545
+g65
+S'Jun 30, 2009'
+p546
+sg67
+I1049
+sg68
+S'End of loan'
+p547
+sg70
+I124
+sba(iplayer_info_parser
+Transfer
 p548
+(dp549
+g65
+S'Aug 15, 2008'
+p550
+sg67
+I124
 sg68
-I720
-sba(iplayer_info_parser
-Transfer
-p549
-(dp550
-g63
-S'Jul 1, 2005'
+S'Loan'
 p551
-sg65
-I720
-sg66
-S'750k'
-p552
-sg68
-I1301
+sg70
+I1049
 sba(iplayer_info_parser
 Transfer
-p553
-(dp554
-g63
-S'Jul 1, 2001'
-p555
-sg65
-I1301
-sg66
-S'?'
+p552
+(dp553
+g65
+S'Jun 30, 2008'
+p554
+sg67
+I1049
 sg68
-I3270
-sbasba(iplayer_info_parser
-Player
+S'End of loan'
+p555
+sg70
+I47
+sba(iplayer_info_parser
+Transfer
 p556
 (dp557
-g43
-S'1.50m'
+g65
+S'Jan 11, 2008'
 p558
-sg5
-S'Wilson Bruno Naval Costa Eduardo'
-p559
-sg6
-S'http://www.transfermarkt.co.uk/wilson-eduardo/profil/spieler/60799'
-p560
-sg47
-S'25'
-p561
-sg11
-Nsg49
-VProeleven Gestão Desportiva Lda
-p562
-sg51
-S'7'
-sg53
-S'Striker - Secondary Striker'
-p563
-sg55
-S'right'
-p564
-sg57
-S'Portugal'
-p565
-sg59
-(lp566
-(iplayer_info_parser
-Transfer
-p567
-(dp568
-g63
-S'Aug 31, 2015'
-p569
-sg65
-I1075
-sg66
-S'Free transfer'
-p570
+sg67
+I47
 sg68
-I336
+S'Loan'
+p559
+sg70
+I6182
+sba(iplayer_info_parser
+Transfer
+p560
+(dp561
+g65
+S'Jan 10, 2008'
+p562
+sg67
+I6182
+sg68
+S'End of loan'
+p563
+sg70
+I134
+sba(iplayer_info_parser
+Transfer
+p564
+(dp565
+g65
+S'Jul 1, 2007'
+p566
+sg67
+I134
+sg68
+S'Loan'
+p567
+sg70
+I6182
+sba(iplayer_info_parser
+Transfer
+p568
+(dp569
+g65
+S'Jul 1, 2006'
+p570
+sg67
+I6182
+sg68
+S'-'
+sg70
+I10200
 sba(iplayer_info_parser
 Transfer
 p571
 (dp572
-g63
-S'Jun 30, 2015'
+g65
+S'Jul 1, 2005'
 p573
-sg65
-I336
-sg66
-S'End of loan'
+sg67
+I10200
+sg68
+S'-'
+sg70
+I16200
+sbasba(iplayer_info_parser
+Player
 p574
-sg68
-I1268
-sba(iplayer_info_parser
-Transfer
-p575
-(dp576
-g63
-S'Jan 30, 2015'
+(dp575
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/72772-1410511999.jpg?lm=1433144909'
+p576
+sg45
+S'3.75m'
 p577
-sg65
-I1268
-sg66
-S'Loan'
+sg5
+VJosué Filipe Soares Pesqueira
 p578
-sg68
-I336
-sba(iplayer_info_parser
-Transfer
+sg6
+S'http://www.transfermarkt.co.uk/josue/profil/spieler/72772'
 p579
-(dp580
-g63
-S'Jan 29, 2015'
+sg49
+S'25'
+p580
+sg11
+Nsg51
+VProeleven Gestão Desportiva Lda
 p581
-sg65
-I336
-sg66
-S'End of loan'
+sg53
+S'27'
 p582
-sg68
-I419
-sba(iplayer_info_parser
-Transfer
+sg55
+S'Midfield - Right Wing'
 p583
-(dp584
-g63
-S'Jul 21, 2014'
+sg57
+S'left'
+p584
+sg59
+S'Portugal'
 p585
-sg65
-I419
-sg66
-S'Loan fee:'
-p586
-sg68
-I336
-sba(iplayer_info_parser
+sg61
+(lp586
+(iplayer_info_parser
 Transfer
 p587
 (dp588
-g63
-S'Jun 30, 2013'
+g65
+S'Jun 30, 2016'
 p589
-sg65
-I336
-sg66
+sg67
+I720
+sg68
 S'End of loan'
 p590
-sg68
-I2990
+sg70
+I1075
 sba(iplayer_info_parser
 Transfer
 p591
 (dp592
-g63
-S'Aug 29, 2012'
+g65
+S'Jan 26, 2016'
 p593
-sg65
-I2990
-sg66
+sg67
+I1075
+sg68
 S'Loan'
 p594
-sg68
-I336
+sg70
+I720
 sba(iplayer_info_parser
 Transfer
 p595
 (dp596
-g63
-S'Jun 30, 2012'
+g65
+S'Jan 20, 2016'
 p597
-sg65
-I336
-sg66
+sg67
+I720
+sg68
 S'End of loan'
 p598
-sg68
-I4750
+sg70
+I20
 sba(iplayer_info_parser
 Transfer
 p599
 (dp600
-g63
-S'Jul 1, 2011'
+g65
+S'Jul 13, 2015'
 p601
-sg65
-I4750
-sg66
-S'Loan'
-p602
+sg67
+I20
 sg68
-I336
+S'Loan fee:'
+p602
+sg70
+I720
 sba(iplayer_info_parser
 Transfer
 p603
 (dp604
-g63
-S'Jun 30, 2011'
+g65
+S'Jun 30, 2015'
 p605
-sg65
-I336
-sg66
+sg67
+I720
+sg68
 S'End of loan'
 p606
-sg68
-I1436
+sg70
+I20
 sba(iplayer_info_parser
 Transfer
 p607
 (dp608
-g63
-S'Jul 1, 2010'
+g65
+S'Aug 11, 2014'
 p609
-sg65
-I1436
-sg66
-S'Loan'
-p610
+sg67
+I20
 sg68
-I336
+S'Loan fee:'
+p610
+sg70
+I720
 sba(iplayer_info_parser
 Transfer
 p611
 (dp612
-g63
-S'Jun 30, 2010'
+g65
+S'Jul 1, 2013'
 p613
-sg65
-I336
-sg66
-S'End of loan'
-p614
+sg67
+I720
 sg68
-I7378
+S'375k'
+p614
+sg70
+I2995
 sba(iplayer_info_parser
 Transfer
 p615
 (dp616
-g63
-S'Jan 1, 2010'
+g65
+S'Jul 1, 2011'
 p617
-sg65
-I7378
-sg66
-S'Loan'
-p618
+sg67
+I2995
 sg68
-I336
+S'Free transfer'
+p618
+sg70
+I720
 sba(iplayer_info_parser
 Transfer
 p619
 (dp620
-g63
-S'Dec 31, 2009'
+g65
+S'Jun 30, 2011'
 p621
-sg65
-I336
-sg66
+sg67
+I720
+sg68
 S'End of loan'
 p622
-sg68
-I11085
+sg70
+I1426
 sba(iplayer_info_parser
 Transfer
 p623
 (dp624
-g63
-S'Jul 1, 2009'
+g65
+S'Jul 1, 2010'
 p625
-sg65
-I11085
-sg66
+sg67
+I1426
+sg68
 S'Loan'
 p626
-sg68
-I10283
+sg70
+I720
 sba(iplayer_info_parser
 Transfer
 p627
 (dp628
-g63
-S'Jul 1, 2007'
+g65
+S'Jun 30, 2010'
 p629
-sg65
-I10283
-sg66
-S'-'
+sg67
+I720
 sg68
+S'End of loan'
+p630
+sg70
+I3327
+sba(iplayer_info_parser
+Transfer
+p631
+(dp632
+g65
+S'Jan 1, 2010'
+p633
+sg67
+I3327
+sg68
+S'Loan'
+p634
+sg70
+I720
+sba(iplayer_info_parser
+Transfer
+p635
+(dp636
+g65
+S'Oct 1, 2009'
+p637
+sg67
+I720
+sg68
+S'End of loan'
+p638
+sg70
+I10140
+sba(iplayer_info_parser
+Transfer
+p639
+(dp640
+g65
+S'Jul 2, 2009'
+p641
+sg67
+I10140
+sg68
+S'Loan'
+p642
+sg70
+I720
+sba(iplayer_info_parser
+Transfer
+p643
+(dp644
+g65
+S'Jul 1, 2009'
+p645
+sg67
+I720
+sg68
+S'-'
+sg70
+I9844
+sba(iplayer_info_parser
+Transfer
+p646
+(dp647
+g65
+S'Jun 30, 2008'
+p648
+sg67
+I9844
+sg68
+S'End of loan'
+p649
+sg70
+I48010
+sba(iplayer_info_parser
+Transfer
+p650
+(dp651
+g65
+S'Aug 1, 2007'
+p652
+sg67
+I48010
+sg68
+S'Loan'
+p653
+sg70
+I9844
+sba(iplayer_info_parser
+Transfer
+p654
+(dp655
+g65
+S'Jul 1, 2007'
+p656
+sg67
+I9844
+sg68
+S'-'
+sg70
+I47962
+sbasba(iplayer_info_parser
+Player
+p657
+(dp658
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/131163-1442916105.jpg?lm=1442916126'
+p659
+sg45
+S'1.88m'
+p660
+sg5
+S'Pedro Miguel Martins Santos'
+p661
+sg6
+S'http://www.transfermarkt.co.uk/pedro-santos/profil/spieler/131163'
+p662
+sg49
+S'28'
+p663
+sg11
+Nsg51
+VProeleven Gestão Desportiva Lda
+p664
+sg53
+S'23'
+p665
+sg55
+S'Midfield - Right Wing'
+p666
+sg57
+S'left'
+p667
+sg59
+S'Portugal'
+p668
+sg61
+(lp669
+(iplayer_info_parser
+Transfer
+p670
+(dp671
+g65
+S'Jun 30, 2014'
+p672
+sg67
+I1075
+sg68
+S'End of loan'
+p673
+sg70
+I2425
+sba(iplayer_info_parser
+Transfer
+p674
+(dp675
+g65
+S'Jan 2, 2014'
+p676
+sg67
+I2425
+sg68
+S'Loan'
+p677
+sg70
+I1075
+sba(iplayer_info_parser
+Transfer
+p678
+(dp679
+g65
+S'Jan 1, 2014'
+p680
+sg67
+I1075
+sg68
+S'End of loan'
+p681
+sg70
+I13499
+sba(iplayer_info_parser
+Transfer
+p682
+(dp683
+g65
+S'Sep 4, 2013'
+p684
+sg67
+I13499
+sg68
+S'Loan'
+p685
+sg70
+I1075
+sba(iplayer_info_parser
+Transfer
+p686
+(dp687
+g65
+S'Jul 1, 2013'
+p688
+sg67
+I1075
+sg68
+S'Free transfer'
+p689
+sg70
+I1085
+sba(iplayer_info_parser
+Transfer
+p690
+(dp691
+g65
+S'Jul 1, 2012'
+p692
+sg67
+I1085
+sg68
+S'Free transfer'
+p693
+sg70
+I3345
+sba(iplayer_info_parser
+Transfer
+p694
+(dp695
+g65
+S'Jul 1, 2010'
+p696
+sg67
+I3345
+sg68
+S'?'
+sg70
+I3268
+sba(iplayer_info_parser
+Transfer
+p697
+(dp698
+g65
+S'Jul 1, 2007'
+p699
+sg67
+I3268
+sg68
+S'-'
+sg70
+I20205
+sbasba(iplayer_info_parser
+Player
+p700
+(dp701
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/14127-1442915938.jpg?lm=1442915951'
+p702
+sg45
+S'375k'
+p703
+sg5
+VAlan Osório da Costa Silva
+p704
+sg6
+S'http://www.transfermarkt.co.uk/alan/profil/spieler/14127'
+p705
+sg49
+S'36'
+p706
+sg11
+Nsg51
+S'CONACTA INC'
+p707
+sg53
+S'30'
+p708
+sg55
+S'Midfield - Right Wing'
+p709
+sg57
+S'right'
+p710
+sg59
+S'Brazil'
+p711
+sg61
+(lp712
+(iplayer_info_parser
+Transfer
+p713
+(dp714
+g65
+S'Jul 1, 2008'
+p715
+sg67
+I1075
+sg68
+S'Free transfer'
+p716
+sg70
+I720
+sba(iplayer_info_parser
+Transfer
+p717
+(dp718
+g65
+S'Jun 30, 2008'
+p719
+sg67
+I720
+sg68
+S'End of loan'
+p720
+sg70
+I2420
+sba(iplayer_info_parser
+Transfer
+p721
+(dp722
+g65
+S'Jul 1, 2007'
+p723
+sg67
+I2420
+sg68
+S'Loan'
+p724
+sg70
+I720
+sba(iplayer_info_parser
+Transfer
+p725
+(dp726
+g65
+S'Jul 1, 2005'
+p727
+sg67
+I720
+sg68
+S'750k'
+p728
+sg70
+I1301
+sba(iplayer_info_parser
+Transfer
+p729
+(dp730
+g65
+S'Jul 1, 2001'
+p731
+sg67
+I1301
+sg68
+S'?'
+sg70
+I3270
+sbasba(iplayer_info_parser
+Player
+p732
+(dp733
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/60799-1442916186.jpg?lm=1442916206'
+p734
+sg45
+S'1.50m'
+p735
+sg5
+S'Wilson Bruno Naval Costa Eduardo'
+p736
+sg6
+S'http://www.transfermarkt.co.uk/wilson-eduardo/profil/spieler/60799'
+p737
+sg49
+S'25'
+p738
+sg11
+Nsg51
+VProeleven Gestão Desportiva Lda
+p739
+sg53
+S'7'
+sg55
+S'Striker - Secondary Striker'
+p740
+sg57
+S'right'
+p741
+sg59
+S'Portugal'
+p742
+sg61
+(lp743
+(iplayer_info_parser
+Transfer
+p744
+(dp745
+g65
+S'Aug 31, 2015'
+p746
+sg67
+I1075
+sg68
+S'Free transfer'
+p747
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p748
+(dp749
+g65
+S'Jun 30, 2015'
+p750
+sg67
+I336
+sg68
+S'End of loan'
+p751
+sg70
+I1268
+sba(iplayer_info_parser
+Transfer
+p752
+(dp753
+g65
+S'Jan 30, 2015'
+p754
+sg67
+I1268
+sg68
+S'Loan'
+p755
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p756
+(dp757
+g65
+S'Jan 29, 2015'
+p758
+sg67
+I336
+sg68
+S'End of loan'
+p759
+sg70
+I419
+sba(iplayer_info_parser
+Transfer
+p760
+(dp761
+g65
+S'Jul 21, 2014'
+p762
+sg67
+I419
+sg68
+S'Loan fee:'
+p763
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p764
+(dp765
+g65
+S'Jun 30, 2013'
+p766
+sg67
+I336
+sg68
+S'End of loan'
+p767
+sg70
+I2990
+sba(iplayer_info_parser
+Transfer
+p768
+(dp769
+g65
+S'Aug 29, 2012'
+p770
+sg67
+I2990
+sg68
+S'Loan'
+p771
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p772
+(dp773
+g65
+S'Jun 30, 2012'
+p774
+sg67
+I336
+sg68
+S'End of loan'
+p775
+sg70
+I4750
+sba(iplayer_info_parser
+Transfer
+p776
+(dp777
+g65
+S'Jul 1, 2011'
+p778
+sg67
+I4750
+sg68
+S'Loan'
+p779
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p780
+(dp781
+g65
+S'Jun 30, 2011'
+p782
+sg67
+I336
+sg68
+S'End of loan'
+p783
+sg70
+I1436
+sba(iplayer_info_parser
+Transfer
+p784
+(dp785
+g65
+S'Jul 1, 2010'
+p786
+sg67
+I1436
+sg68
+S'Loan'
+p787
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p788
+(dp789
+g65
+S'Jun 30, 2010'
+p790
+sg67
+I336
+sg68
+S'End of loan'
+p791
+sg70
+I7378
+sba(iplayer_info_parser
+Transfer
+p792
+(dp793
+g65
+S'Jan 1, 2010'
+p794
+sg67
+I7378
+sg68
+S'Loan'
+p795
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p796
+(dp797
+g65
+S'Dec 31, 2009'
+p798
+sg67
+I336
+sg68
+S'End of loan'
+p799
+sg70
+I11085
+sba(iplayer_info_parser
+Transfer
+p800
+(dp801
+g65
+S'Jul 1, 2009'
+p802
+sg67
+I11085
+sg68
+S'Loan'
+p803
+sg70
+I10283
+sba(iplayer_info_parser
+Transfer
+p804
+(dp805
+g65
+S'Jul 1, 2007'
+p806
+sg67
+I10283
+sg68
+S'-'
+sg70
 I48365
 sbasba(iplayer_info_parser
 Player
-p630
-(dp631
+p807
+(dp808
 g43
-S'2.25m'
-p632
+S'http://akacdn.transfermarkt.de/images/portrait/header/9335-1442916287.jpg?lm=1442916297'
+p809
+sg45
+S'1.50m'
+p810
 sg5
-V\u041d\u0438\u043a\u043e\u043b\u0430 \u0421\u0442\u043e\u0458\u0438\u0459\u043a\u043e\u0432\u0438\u045b
-p633
+S'Rui Pedro da Rocha Fonte'
+p811
 sg6
-S'http://www.transfermarkt.co.uk/nikola-stojiljkovic/profil/spieler/113504'
-p634
-sg47
-S'23'
-p635
+S'http://www.transfermarkt.co.uk/rui-fonte/profil/spieler/9335'
+p812
+sg49
+S'\r\n                                         '
+p813
 sg11
-Nsg49
-g50
-sg51
-S'19'
-p636
+Nsg51
+g52
 sg53
-S'Striker - Centre Forward'
-p637
+S'17'
+p814
 sg55
-S'right'
-p638
+S''
 sg57
-S'Serbia'
-p639
+S'Striker - Secondary Striker'
+p815
 sg59
-(lp640
+S''
+sg61
+(lp816
 (iplayer_info_parser
 Transfer
-p641
-(dp642
-g63
-S'Aug 7, 2015'
-p643
-sg65
+p817
+(dp818
+g65
+S'Jun 30, 2016'
+p819
+sg67
+I10330
+sg68
+S'End of loan'
+p820
+sg70
 I1075
-sg66
-S'563k'
-p644
-sg68
-I6621
 sba(iplayer_info_parser
 Transfer
-p645
-(dp646
-g63
-S'Jan 18, 2013'
-p647
-sg65
-I6621
-sg66
-S'?'
+p821
+(dp822
+g65
+S'Jul 30, 2015'
+p823
+sg67
+I1075
 sg68
-I902
+S'Loan'
+p824
+sg70
+I10330
 sba(iplayer_info_parser
 Transfer
-p648
-(dp649
-g63
+p825
+(dp826
+g65
+S'Jun 30, 2015'
+p827
+sg67
+I10330
+sg68
+S'End of loan'
+p828
+sg70
+I2457
+sba(iplayer_info_parser
+Transfer
+p829
+(dp830
+g65
+S'Feb 2, 2015'
+p831
+sg67
+I2457
+sg68
+S'Loan'
+p832
+sg70
+I10330
+sba(iplayer_info_parser
+Transfer
+p833
+(dp834
+g65
+S'Jan 31, 2013'
+p835
+sg67
+I10330
+sg68
+S'Free transfer'
+p836
+sg70
+I714
+sba(iplayer_info_parser
+Transfer
+p837
+(dp838
+g65
 S'Jul 1, 2011'
-p650
-sg65
-I902
-sg66
-S'-'
+p839
+sg67
+I714
 sg68
+S'Free transfer'
+p840
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p841
+(dp842
+g65
+S'Jun 30, 2011'
+p843
+sg67
+I336
+sg68
+S'End of loan'
+p844
+sg70
+I10773
+sba(iplayer_info_parser
+Transfer
+p845
+(dp846
+g65
+S'Jul 1, 2010'
+p847
+sg67
+I10773
+sg68
+S'Loan'
+p848
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p849
+(dp850
+g65
+S'Jun 30, 2010'
+p851
+sg67
+I336
+sg68
+S'End of loan'
+p852
+sg70
+I1085
+sba(iplayer_info_parser
+Transfer
+p853
+(dp854
+g65
+S'Jul 1, 2009'
+p855
+sg67
+I1085
+sg68
+S'Loan'
+p856
+sg70
+I336
+sba(iplayer_info_parser
+Transfer
+p857
+(dp858
+g65
+S'Jun 30, 2009'
+p859
+sg67
+I336
+sg68
+S'End of loan'
+p860
+sg70
+I11
+sba(iplayer_info_parser
+Transfer
+p861
+(dp862
+g65
+S'May 1, 2009'
+p863
+sg67
+I11
+sg68
+S'End of loan'
+p864
+sg70
+I873
+sba(iplayer_info_parser
+Transfer
+p865
+(dp866
+g65
+S'Jan 1, 2009'
+p867
+sg67
+I873
+sg68
+S'Loan'
+p868
+sg70
+I11
+sba(iplayer_info_parser
+Transfer
+p869
+(dp870
+g65
+S'Oct 1, 2006'
+p871
+sg67
+I11
+sg68
+S'Loan fee:'
+p872
+sg70
+I10283
+sbasba(iplayer_info_parser
+Player
+p873
+(dp874
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/184816-1442916239.jpg?lm=1442916256'
+p875
+sg45
+S'3.75m'
+p876
+sg5
+V\u0623\u062d\u0645\u062f \u062d\u0633\u0646 \u0645\u062d\u062c\u0648\u0628
+p877
+sg6
+S'http://www.transfermarkt.co.uk/ahmed-hassan/profil/spieler/184816'
+p878
+sg49
+S'\r\n                                         '
+p879
+sg11
+Nsg51
+g52
+sg53
+S'20'
+p880
+sg55
+S''
+sg57
+S'Striker - Centre Forward'
+p881
+sg59
+S''
+sg61
+(lp882
+(iplayer_info_parser
+Transfer
+p883
+(dp884
+g65
+S'Aug 26, 2015'
+p885
+sg67
+I1075
+sg68
+S'525k'
+p886
+sg70
+I2425
+sba(iplayer_info_parser
+Transfer
+p887
+(dp888
+g65
+S'Jul 1, 2012'
+p889
+sg67
+I2425
+sg68
+S'-'
+sg70
+I8105
+sba(iplayer_info_parser
+Transfer
+p890
+(dp891
+g65
+S'Oct 1, 2011'
+p892
+sg67
+I8105
+sg68
+S'Free transfer'
+p893
+sg70
+I15897
+sbasba(iplayer_info_parser
+Player
+p894
+(dp895
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/113504-1442916326.jpg?lm=1442916337'
+p896
+sg45
+S'2.25m'
+p897
+sg5
+V\u041d\u0438\u043a\u043e\u043b\u0430 \u0421\u0442\u043e\u0458\u0438\u0459\u043a\u043e\u0432\u0438\u045b
+p898
+sg6
+S'http://www.transfermarkt.co.uk/nikola-stojiljkovic/profil/spieler/113504'
+p899
+sg49
+S'23'
+p900
+sg11
+Nsg51
+g52
+sg53
+S'19'
+p901
+sg55
+S'Striker - Centre Forward'
+p902
+sg57
+S'right'
+p903
+sg59
+S'Serbia'
+p904
+sg61
+(lp905
+(iplayer_info_parser
+Transfer
+p906
+(dp907
+g65
+S'Aug 7, 2015'
+p908
+sg67
+I1075
+sg68
+S'563k'
+p909
+sg70
+I6621
+sba(iplayer_info_parser
+Transfer
+p910
+(dp911
+g65
+S'Jan 18, 2013'
+p912
+sg67
+I6621
+sg68
+S'?'
+sg70
+I902
+sba(iplayer_info_parser
+Transfer
+p913
+(dp914
+g65
+S'Jul 1, 2011'
+p915
+sg67
+I902
+sg68
+S'-'
+sg70
 I19710
+sbasba(iplayer_info_parser
+Player
+p916
+(dp917
+g43
+S'http://akacdn.transfermarkt.de/images/portrait/header/271861-1442916397.jpg?lm=1442916406'
+p918
+sg45
+S'750k'
+p919
+sg5
+S'Crislan Henrique da Silva de Souza'
+p920
+sg6
+S'http://www.transfermarkt.co.uk/crislan/profil/spieler/271861'
+p921
+sg49
+S'\r\n                                         '
+p922
+sg11
+Nsg51
+g52
+sg53
+S'9'
+sg55
+S''
+sg57
+S'Striker - Centre Forward'
+p923
+sg59
+S''
+sg61
+(lp924
+(iplayer_info_parser
+Transfer
+p925
+(dp926
+g65
+S'Jul 1, 2015'
+p927
+sg67
+I1075
+sg68
+S'450k'
+p928
+sg70
+I27475
+sba(iplayer_info_parser
+Transfer
+p929
+(dp930
+g65
+S'Feb 1, 2015'
+p931
+sg67
+I27475
+sg68
+S'?'
+sg70
+I679
+sba(iplayer_info_parser
+Transfer
+p932
+(dp933
+g65
+S'Dec 31, 2014'
+p934
+sg67
+I679
+sg68
+S'End of loan'
+p935
+sg70
+I2646
+sba(iplayer_info_parser
+Transfer
+p936
+(dp937
+g65
+S'Jun 1, 2014'
+p938
+sg67
+I2646
+sg68
+S'Loan'
+p939
+sg70
+I679
+sba(iplayer_info_parser
+Transfer
+p940
+(dp941
+g65
+S'Jan 1, 2014'
+p942
+sg67
+I679
+sg68
+S'?'
+sg70
+I27782
+sba(iplayer_info_parser
+Transfer
+p943
+(dp944
+g65
+S'Nov 30, 2013'
+p945
+sg67
+I27782
+sg68
+S'End of loan'
+p946
+sg70
+I17561
+sba(iplayer_info_parser
+Transfer
+p947
+(dp948
+g65
+S'Sep 1, 2013'
+p949
+sg67
+I17561
+sg68
+S'Loan'
+p950
+sg70
+I27782
+sba(iplayer_info_parser
+Transfer
+p951
+(dp952
+g65
+S'Aug 1, 2013'
+p953
+sg67
+I27782
+sg68
+S'End of loan'
+p954
+sg70
+I679
+sba(iplayer_info_parser
+Transfer
+p955
+(dp956
+g65
+S'Feb 1, 2013'
+p957
+sg67
+I679
+sg68
+S'Loan'
+p958
+sg70
+I27782
 sbasbasS'manager'
-p651
+p959
 (imanager_info_parser
 Manager
-p652
-(dp653
+p960
+(dp961
 g5
 S'paulo alexandre rodrigues fonseca'
-p654
+p962
 sg6
 S'http://www.transfermarkt.co.uk/paulo-fonseca/profil/trainer/19944'
-p655
-sg47
+p963
+sg49
 S'43'
-p656
+p964
 sg11
 NsS'preferred_formation'
-p657
+p965
 S'4-4-2 double 6'
-p658
+p966
 sS'win_percentage'
-p659
+p967
 S'48.3 % Wins'
-p660
-sg57
+p968
+sg59
 S'portugal'
-p661
+p969
 sbsS'full_name'
-p662
+p970
 S'SC Braga'
-p663
+p971
 sS'badge'
-p664
+p972
 S'http://akacdn.transfermarkt.de/images/wappen/normal/1075.png?lm=1432893871'
-p665
+p973
 sb.
