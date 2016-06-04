@@ -13,7 +13,7 @@ def remove_player(player, team):
     try:
         Plays.objects.get(player = player, team = team).delete()
     except ObjectDoesNotExist: 
-        print "Player already did not play for this team"
+        # print "Player already did not play for this team"
         add_history(player, team)
 
 def add_player(player, team):
@@ -34,7 +34,7 @@ def execute_transfer(sender, **kwargs):
     new_team = instance.destiny
     if old_team is not None:
         remove_player(player, old_team)
-    add_player(player, new_team)
+    # add_player(player, new_team)
 
 @receiver(post_save, sender = Plays)
 def add_to_history(sender, created, instance, **kwargs):

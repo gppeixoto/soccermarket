@@ -33,12 +33,13 @@ class Person(models.Model):
         abstract = True
 
 class Player(Person):
-    position = models.CharField(max_length = 100, choices = POSITIONS)
+    position = models.CharField(max_length = 100, choices = POSITIONS, null = True)
     market_value = models.DecimalField(max_digits = 20, decimal_places = 2)
     dominant_foot = models.CharField(max_length = 100, choices = FOOTS)
     shirt_number = models.IntegerField(blank = True, null = True)
     agent = models.CharField(blank = True, max_length = 100, null = True)
     url_profile = models.URLField(blank = True, null = True)
+    picture = models.URLField(blank = True, null = True)
 
     class Meta:
         verbose_name = "Jogador"

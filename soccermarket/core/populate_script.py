@@ -9,7 +9,7 @@ sys.path.append(path.abspath(path.join(path.dirname(__file__), '../../crawler'))
 
 import consts
 from team_info_parser import Team
-from utils import get_team_id_from_url as get_id
+from utils import get_team_id_from_url_populate as get_id
 
 data_path = "../data/"
 
@@ -93,13 +93,14 @@ def populate_manager(team):
         age = parse_number(manager.age)
         name = manager.name.title()
         models.Coach.objects.update_or_create(name = name, age = age, nationality = manager.nationality, preferred_formation = manager.preferred_formation, win_percentage = win_percentage)
-        print "Coach " + repr(name) + " was added to the database"
+        # print "Coach " + repr(name) + " was added to the database"
         bd_team = models.Team.objects.get(name = team.name)
         bd_coach = models.Coach.objects.get(name = name)
         models.Coaches.objects.update_or_create(coach = bd_coach, team = bd_team)
 
 def populate_players(team):
     players = team.players
+    print "Players " + str(len(players)) + " was added to the database"
     for player in players:
         age = parse_number(player.age)
         position = parse_position(player.position)
@@ -108,11 +109,11 @@ def populate_players(team):
         foot = parse_foot(player.foot)
 
         if player.name == '':
-            return
+            continue
 
         models.Player.objects.update_or_create(name = player.name, age = age, nationality = player.nationality, position = position, 
-            market_value = value, dominant_foot = foot, shirt_number = shirt_number, agent = player.agent, url_profile = player.url_profile)
-        print "Player " + repr(player.name) + " was added to the database"
+            market_value = value, dominant_foot = foot, shirt_number = shirt_number, agent = player.agent, url_profile = player.url_profile, picture = player.image_url)
+        # print "Player " + repr(player.name) + " was added to the database"
 
         populate_transfers(player)
 
