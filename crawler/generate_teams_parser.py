@@ -29,13 +29,15 @@ def main():
                         num_players += 1
                         print "\tparsed player %s" % current_player.name
                     except Exception as e:
-                        print "\tparsing error on %s" % player
+                        print ("\tparsing error on %s: " % player)+ str(e)
+                        raise
                 print "\nparsed %d players" % num_players
                 setattr(current_team, "tree", None)
                 with open("../data/team%d.p" % i, "w") as teamfile:
                     pickle.dump(current_team, teamfile)
             except Exception as e:
                 print "\tparsing error on team #%d" % i
+                raise
             finally:
                 print
                 print "#"*40
