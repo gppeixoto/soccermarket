@@ -5,14 +5,16 @@
       {% if player %}
         {% for person in player %}
 <div class="player">
-	<div class="row">
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-			<img src="https://www.procademia.com/uploads/testimonial/e5960d60449f25a538de6363c951faef889c1160.png" style="width: 128px; float: right;">
+	<div class="row" style="padding: 16px">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 picture" style="max-width: 128px;">
+			<img src="{{ person.picture }}" style="width: 128px; float: right;">
 		</div>
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-			<div class="row">
+			<div class="row name">
 				<h1>{{ person.name }}</h1>
 			</div>
+		</div>
+	</div>
 			<!-- <div class="row">
 				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Nome completo:</div>
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">Neymar da Silva Santos Júnior</div>
@@ -41,16 +43,85 @@
 				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Empresário:</div>
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.agent }}</div>
 			</div>
+{% if plays %}
+        {% for play in plays %}
 			<div class="row">
 				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Clube Atual:</div>
-				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.club }}</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ play.team.name }}</div>
 			</div>
+        {% endfor %}
+{% endif %}
 			<script type="text/javascript">
 				$('#position')[0].innerHTML = '{{ person.position }}'.replace('GK', 'Goleiro').replace('RB', 'Lateral direito').replace('CB', 'Zagueiro').replace('LB', 'Lateral esquerdo').replace('DM', 'Volante').replace('CM', 'Meia central').replace('AM', 'Meia avancado').replace('RM', 'Ponta direita').replace('LM', 'Ponta esquerda').replace('CF', 'Atacante');
 				$('#dominant_foot')[0].innerHTML = '{{ person.dominant_foot }}'.replace('R', 'Destro').replace('L', 'Canhoto');
 			</script>
+	<style type="text/css">
+		.picture img {
+			border-radius: 16px;
+		}
+		.name h1 {
+			margin: 24px !important;
+		}
+		.market_value {
+		    text-align: right;
+		}
+		.nome-campo, .campo {
+			outline: 1px solid #DDD;
+			height: 36px !important;
+			padding: 8px; 
+		}
+	</style>
+</div>
+        {% endfor %}
+      {% endif %}
+      {% if coach %}
+        {% for person in coach %}
+<div class="coach">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="row name">
+				<h1>{{ person.name }}</h1>
+			</div>
 		</div>
 	</div>
+			<!-- <div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Nome completo:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">Neymar da Silva Santos Júnior</div>
+			</div> -->
+			<!-- <div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Local de Nascimento:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.name }}</div>
+			</div> -->
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Idade:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.age }}</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Nacionalidade:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ person.nationality }}</div>
+			</div>
+{% if coaches %}
+        {% for coaches in coaches %}
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Clube Atual:</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ coaches.team.name }}</div>
+			</div>
+        {% endfor %}
+{% endif %}
+			<script type="text/javascript">
+				$('#position')[0].innerHTML = '{{ person.position }}'.replace('GK', 'Goleiro').replace('RB', 'Lateral direito').replace('CB', 'Zagueiro').replace('LB', 'Lateral esquerdo').replace('DM', 'Volante').replace('CM', 'Meia central').replace('AM', 'Meia avancado').replace('RM', 'Ponta direita').replace('LM', 'Ponta esquerda').replace('CF', 'Atacante');
+				$('#dominant_foot')[0].innerHTML = '{{ person.dominant_foot }}'.replace('R', 'Destro').replace('L', 'Canhoto');
+			</script>
+	<style type="text/css">
+		.name h1 {
+			margin: 24px !important;
+		}
+		.nome-campo, .campo {
+			outline: 1px solid #DDD;
+			height: 36px !important;
+			padding: 8px; 
+		}
+	</style>
 </div>
         {% endfor %}
       {% endif %}

@@ -55,7 +55,15 @@ def team(request):
             Q(name__contains=name)
             )
 
-        return render(request, 'team.html', { 'team': team })
+        plays = Plays.objects.filter(
+            Q(team__name__contains=name)
+            )
+
+        coaches = Coaches.objects.filter(
+            Q(team__name__contains=name)
+            )
+
+        return render(request, 'team.html', { 'team': team, 'plays': plays, 'coaches': coaches })
     return render(request, 'team.html')
 
 def player(request):
@@ -67,7 +75,19 @@ def player(request):
             Q(name__contains=name)
             )
 
-        return render(request, 'player.html', { 'player': player })
+        plays = Plays.objects.filter(
+            Q(player__name__contains=name)
+            )
+
+        coach = Coach.objects.filter(
+            Q(name__contains=name)
+            )
+
+        coaches = Coaches.objects.filter(
+            Q(coach__name__contains=name)
+            )
+
+        return render(request, 'player.html', { 'player': player, 'plays': plays, 'coach': coach, 'coaches': coaches })
     return render(request, 'player.html')
     
 def transfer(request):
