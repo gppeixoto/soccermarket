@@ -1,0 +1,75 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+{% if team %}
+        {% for team in team %}
+<div class="team">
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="max-width: 128px;">
+			<img src="{{ team.badge }}" style="width: 128px; float: right;">
+		</div>
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<div class="row">
+				<h1>{{ team.name }}<br>{{ team.country }}</h1>
+			</div>
+		</div>
+	</div>
+{% if coaches %}
+        {% for coaches in coaches %}
+	<div class="row" style="padding: 8px; outline: 1px solid #DDD;">
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 nome-campo">Treinador:</div>
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 campo">{{ coaches.coach.name }}</div>
+	</div>
+        {% endfor %}
+{% endif %}
+{% if plays %}
+        {% for play in plays %}
+	<div class="row" style="outline: 1px solid #DDD;">
+		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 campo picture"><img src="{{ play.player.picture }}"></div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 campo position">{{ play.player.name }}<br>{{ play.player.position }}</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo nationality">{{ play.player.nationality }}</div>
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 campo market_value">{{ play.player.market_value }}</div>
+	</div>
+        {% endfor %}
+{% endif %}
+	<style type="text/css">
+		.picture img {
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+		}
+		.picture {
+			max-width: 56px !important;
+		}
+		.market_value {
+		    text-align: right;
+		}
+		.picture, .position, .nationality, .market_value {
+			outline: 1px solid #DDD;
+			height: 56px !important;
+			padding: 8px; 
+		}
+		.market_value {
+			outline: none;
+			padding-right: 0px;
+		}
+	</style>
+	<script type="text/javascript">
+		for (i = 0; i < $('.market_value').length; i++) {
+			$('.position')[i].innerHTML = $('.position')[i].innerHTML.replace('GK', 'Goleiro').replace('RB', 'Lateral direito').replace('CB', 'Zagueiro').replace('LB', 'Lateral esquerdo').replace('DM', 'Volante').replace('CM', 'Meia central').replace('AM', 'Meia avancado').replace('RM', 'Ponta direita').replace('LM', 'Ponta esquerda').replace('CF', 'Atacante').replace('<br>None', '');
+			if ($('.nationality')[i].innerHTML == '')
+				$('.nationality')[i].innerHTML = 'N/I';
+			if ($('.market_value')[i].innerHTML == '-1,00')
+				$('.market_value')[i].innerHTML = 'N/I';
+			else if ($('.market_value')[i].innerHTML.slice(0, -3) >= 200)
+				$('.market_value')[i].innerHTML = '\u00A3 0,' + $('.market_value')[i].innerHTML.slice(0, 2) + ' M';
+			else
+				$('.market_value')[i].innerHTML = '\u00A3 ' + $('.market_value')[i].innerHTML + ' M';
+		}
+	</script>
+</div>
+    {% endfor %}
+  {% endif %}
+
+{% endblock %}

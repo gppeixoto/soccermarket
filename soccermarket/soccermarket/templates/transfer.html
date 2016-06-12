@@ -1,0 +1,78 @@
+{% extends "template.html" %}
+
+{% block content %}
+
+{% if transfer %}
+        {% for transfer in transfer %}
+
+<div class="transfer">
+	<div class="row" style="padding: 16px">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 picture" style="max-width: 128px;">
+			<img src="{{ transfer.player.picture }}" style="width: 128px; float: right;">
+		</div>
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<div class="row name" style="margin-top: 0 !important;">
+				<h1 style="font-size: 52px !important;">{{ transfer.player.name }}</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="text-align: right;">
+			<img src="{{ transfer.origin.badge }}" style="width: 128px;">
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="text-align: center;">
+			<div class="row">
+				<img src="http://www.expressagenciadigital.com.br/wp-content/uploads/2015/12/seta-verde.png" style="width: 128px;">
+			</div>
+			<div class="row">
+				<h1 id="value">{{ transfer.value }}</h1>
+			</div>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="text-align: left;">
+			<img src="{{ transfer.destiny.badge }}" style="width: 128px;">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 origin" style="text-align: right;">
+			<h1>{{ transfer.origin.name }}</h1>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 date" style="text-align: center;">
+			<h1 id="date" style="font-size: 48px;">{{ transfer.date }}</h1>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 destiny" style="text-align: left;">
+			<h1>{{ transfer.destiny.name }}</h1>
+		</div>
+	</div>
+	<style type="text/css">
+		.picture img {
+			border-radius: 16px;
+		}
+		.name h1 {
+			margin: 24px !important;
+		}
+		.transfer .row {
+			margin-top: 16px !important;
+		}
+		.transfer h1 {
+			font-size: 32px !important;
+		}
+		.origin, .date, .destiny {
+			outline: 1px solid #DDD;
+			height: 100px !important;
+		}
+	</style>
+	<script type="text/javascript">
+		if ($('#value')[0].innerHTML == '-1,00')
+			$('#value')[0].innerHTML = '';
+		else
+			$('#value')[0].innerHTML = '\u00A3 ' + $('#value')[0].innerHTML + ' M';
+		$('#date')[0].innerHTML = $('#date')[0].innerHTML.replace(' de Janeiro de ', '/01/').replace(' de Fevereiro de ', '/02/').replace(' de Março de ', '/03/').replace(' de Abril de ', '/04/').replace(' de Maio de ', '/05/').replace(' de Junho de ', '/06/').replace(' de Julho de ', '/07/').replace(' de Agosto de ', '/08/').replace(' de Setembro de ', '/09/').replace(' de Outubro de ', '/10/').replace(' de Novembro de ', '/11/').replace(' de Dezembro de ', '/12/');
+		if ($('#date')[0].innerHTML.indexOf('/') == 1)
+			$('#date')[0].innerHTML = '0' + $('#date')[0].innerHTML;
+	</script>
+</div>
+
+    {% endfor %}
+  {% endif %}
+
+{% endblock %}
