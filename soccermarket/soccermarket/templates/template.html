@@ -11,6 +11,7 @@
 
   <link href="{% static "assets/css/get-shit-done.css" %}" rel="stylesheet" />  
   <link href="{% static "assets/css/demo.css" %}" rel="stylesheet" /> 
+  <link rel="stylesheet" type="text/css" href="{% static "assets/css/hidden-form.css" %}">
 
   <!--     Font Awesome     -->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -31,7 +32,9 @@
       {% endblock %}
 
       <div class="row footer">
-        <img src="{% static "assets/img/footer.jpg" %}">
+        <a href="/">
+          <img src="{% static "assets/img/footer.jpg" %}">
+        </a>
       </div>
     </div>
     <!-- end container -->

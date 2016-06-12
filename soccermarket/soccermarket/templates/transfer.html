@@ -12,7 +12,13 @@
 		</div>
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 			<div class="row name" style="margin-top: 0 !important;">
-				<h1 style="font-size: 52px !important;">{{ transfer.player.name }}</h1>
+				<h1 style="font-size: 52px !important;">
+				<form method="post" action="/player/" class="inline">
+					{% csrf_token %}
+  					<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  					<button type="submit" name="name" value="{{ transfer.player.name }}" class="link-button">{{ transfer.player.name }}</button>
+				</form>
+				</h1>
 			</div>
 		</div>
 	</div>
@@ -34,13 +40,25 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 origin" style="text-align: right;">
-			<h1>{{ transfer.origin.name }}</h1>
+			<h1>
+			<form method="post" action="/team/" class="inline">
+				{% csrf_token %}
+  				<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  				<button type="submit" name="name" value="{{ transfer.origin.name }}" class="link-button">{{ transfer.origin.name }}</button>
+			</form>
+			</h1>
 		</div>
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 date" style="text-align: center;">
 			<h1 id="date" style="font-size: 48px;">{{ transfer.date }}</h1>
 		</div>
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 destiny" style="text-align: left;">
-			<h1>{{ transfer.destiny.name }}</h1>
+			<h1>
+			<form method="post" action="/team/" class="inline">
+				{% csrf_token %}
+  				<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  				<button type="submit" name="name" value="{{ transfer.destiny.name }}" class="link-button">{{ transfer.destiny.name }}</button>
+			</form>
+			</h1>
 		</div>
 	</div>
 	<style type="text/css">

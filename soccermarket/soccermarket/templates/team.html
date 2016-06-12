@@ -16,10 +16,16 @@
 		</div>
 	</div>
 {% if coaches %}
-        {% for coaches in coaches %}
+        {% for coach in coaches %}
 	<div class="row" style="padding: 8px; outline: 1px solid #DDD;">
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 nome-campo">Treinador:</div>
-		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 campo">{{ coaches.coach.name }}</div>
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 campo">
+			<form method="post" action="/player/" class="inline">
+				{% csrf_token %}
+  				<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  				<button type="submit" name="name" value="{{ coach.coach.name }}" class="link-button">{{ coach.coach.name }}</button>
+			</form>
+		</div>
 	</div>
         {% endfor %}
 {% endif %}
@@ -27,7 +33,15 @@
         {% for play in plays %}
 	<div class="row" style="outline: 1px solid #DDD;">
 		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 campo picture"><img src="{{ play.player.picture }}"></div>
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 campo position">{{ play.player.name }}<br>{{ play.player.position }}</div>
+		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 campo position">
+			<form method="post" action="/player/" class="inline">
+				{% csrf_token %}
+  				<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  				<button type="submit" name="name" value="{{ play.player.name }}" class="link-button">{{ play.player.name }}</button>
+			</form>
+			<br>
+			{{ play.player.position }}
+		</div>
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo nationality">{{ play.player.nationality }}</div>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 campo market_value">{{ play.player.market_value }}</div>
 	</div>

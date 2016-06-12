@@ -47,7 +47,13 @@
         {% for play in plays %}
 			<div class="row">
 				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Clube Atual:</div>
-				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ play.team.name }}</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">
+					<form method="post" action="/team/" class="inline">
+						{% csrf_token %}
+  						<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  						<button type="submit" name="name" value="{{ play.team.name }}" class="link-button" style="font-weight:bold;">{{ play.team.name }}</button>
+					</form>
+				</div>
 			</div>
         {% endfor %}
 {% endif %}
@@ -104,7 +110,13 @@
         {% for coaches in coaches %}
 			<div class="row">
 				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nome-campo">Clube Atual:</div>
-				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">{{ coaches.team.name }}</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 campo">
+					<form method="post" action="/team/" class="inline">
+						{% csrf_token %}
+  						<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  						<button type="submit" name="name" value="{{ coaches.team.name }}" class="link-button">{{ coaches.team.name }}</button>
+					</form>
+				</div>
 			</div>
         {% endfor %}
 {% endif %}
