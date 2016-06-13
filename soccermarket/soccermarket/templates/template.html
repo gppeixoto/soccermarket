@@ -30,16 +30,17 @@
       {% block content %}
 
       {% endblock %}
-
-      <div class="row footer">
-        <a href="/">
-          <img src="{% static "assets/img/footer.jpg" %}">
-        </a>
-      </div>
     </div>
     <!-- end container -->
 
-    <div class="space"></div>
+    <div>
+      <a href="{% url 'index' %}">
+        <img src="../static/assets/img/soccermarket.png" class="img-responsive center-block" alt="SoccerMarket">
+      </a>
+      <a href="https://www.facebook.com/esbarre/">
+        <img src="{% static "assets/img/goodfooter.png" %}" class="img-responsive center-block" style="height:100px; width:800px" alt="Esbarre">
+      </a>
+    </div>
 
 </div>
 <!-- end main -->
