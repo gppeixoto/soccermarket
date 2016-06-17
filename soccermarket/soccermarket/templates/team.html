@@ -37,7 +37,7 @@
 			<form method="post" action="/player/" class="inline">
 				{% csrf_token %}
   				<input type="hidden" name="extra_submit_param" value="extra_submit_value">
-  				<button type="submit" name="name" value="{{ play.player.name }}" class="link-button">{{ play.player.name }}</button>
+  				<button type="submit" name="name" value="{{ play.player.name }}" class="link-button" style="font-weight: bold; padding: 0;">{{ play.player.name }}</button>
 			</form>
 			<br>
 			{{ play.player.position }}
@@ -67,6 +67,9 @@
 		.market_value {
 			outline: none;
 			padding-right: 0px;
+		}
+		.nationality, .market_value {
+			line-height: 38px;
 		}
 	</style>
 	<script type="text/javascript">

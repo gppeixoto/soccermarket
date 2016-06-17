@@ -87,7 +87,15 @@ def player(request):
             Q(coach__name__contains=name)
             )
 
-        return render(request, 'player.html', { 'player': player, 'plays': plays, 'coach': coach, 'coaches': coaches })
+        history = History.objects.filter(
+            Q(player__name__contains=name)
+            )
+
+        transfer = Transfer.objects.filter(
+            Q(player__name__contains=name)
+            )
+
+        return render(request, 'player.html', { 'player': player, 'plays': plays, 'coach': coach, 'coaches': coaches, 'history': history, 'transfer': transfer })
     return render(request, 'player.html')
     
 def transfer(request):

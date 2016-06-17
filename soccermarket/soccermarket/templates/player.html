@@ -51,9 +51,63 @@
 					<form method="post" action="/team/" class="inline">
 						{% csrf_token %}
   						<input type="hidden" name="extra_submit_param" value="extra_submit_value">
-  						<button type="submit" name="name" value="{{ play.team.name }}" class="link-button" style="font-weight:bold;">{{ play.team.name }}</button>
+  						<button type="submit" name="name" value="{{ play.team.name }}" class="link-button" style="font-weight: bold; padding: 0;">{{ play.team.name }}</button>
 					</form>
 				</div>
+			</div>
+        {% endfor %}
+{% endif %}
+{% if history %}
+			<div class="row">
+				<h4>Histórico de Times</h4>
+			</div>
+        {% for history in history %}
+			<div class="row history">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 nome-campo">
+					<img src="{{ history.team.badge }}" style="width: 128px; float: right;">
+				</div>
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 campo">
+					<form method="post" action="/team/" class="inline">
+						{% csrf_token %}
+  						<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  						<button type="submit" name="name" value="{{ history.team.name }}" class="link-button" style="font-weight: bold; padding: 0;">{{ history.team.name }}</button>
+					</form>
+				</div>
+			</div>
+        {% endfor %}
+{% endif %}
+{% if transfer %}
+			<div class="row">
+				<h4>Transferências</h4>
+			</div>
+			<div class="row">
+				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 nome-campo" style="text-align: center;">Clube de Origem</div>
+				<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 nome-campo" style="text-align: center;">Clube de Destino</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 nome-campo" style="text-align: center;">Valor</div>
+			</div>
+        {% for transfer in transfer %}
+			<div class="row history">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 nome-campo">
+					<img src="{{ transfer.origin.badge }}" style="width: 128px; float: right;">
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 campo">
+					<form method="post" action="/team/" class="inline">
+						{% csrf_token %}
+  						<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  						<button type="submit" name="name" value="{{ transfer.origin.name }}" class="link-button" style="font-weight: bold; padding: 0;">{{ transfer.origin.name }}</button>
+					</form>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 nome-campo">
+					<img src="{{ transfer.destiny.badge }}" style="width: 128px; float: right;">
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 campo">
+					<form method="post" action="/team/" class="inline">
+						{% csrf_token %}
+  						<input type="hidden" name="extra_submit_param" value="extra_submit_value">
+  						<button type="submit" name="name" value="{{ transfer.destiny.name }}" class="link-button" style="font-weight: bold; padding: 0;">{{ transfer.destiny.name }}</button>
+					</form>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 campo value">{{ transfer.value }}</div>
 			</div>
         {% endfor %}
 {% endif %}
@@ -76,7 +130,22 @@
 			height: 36px !important;
 			padding: 8px; 
 		}
+		.history .nome-campo, .history .campo {
+			height: 68px !important;
+			line-height: 52px;
+		}
+		.history img {
+			width: 40px !important;
+		}
 	</style>
+	<script type="text/javascript">
+		for (i = 0; i < $('.value').length; i++) {
+			if ($('.value')[i].innerHTML == '-1,00')
+				$('.value')[i].innerHTML = 'N/I';
+			else
+				$('.value')[i].innerHTML = '\u00A3 ' + $('.value')[0].innerHTML + ' M';
+		}
+	</script>
 </div>
         {% endfor %}
       {% endif %}
@@ -130,7 +199,7 @@
 		}
 		.nome-campo, .campo {
 			outline: 1px solid #DDD;
-			height: 36px !important;
+			height: 36px;
 			padding: 8px; 
 		}
 	</style>
