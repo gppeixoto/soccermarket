@@ -1,5 +1,6 @@
-# Python compiled files
+# Python related
 *.pyc
+venv/
 
 # Mac files
 .DS_STORE
